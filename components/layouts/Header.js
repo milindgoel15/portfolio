@@ -51,7 +51,7 @@ let Header = () => {
             <meta property="og:description" content="A Web Developer, based in India building astonishing web experiences." />
             <meta property="og:url" content="https://milindgoel15.github.io" />
             <meta property="og:site_name" content="milindgoel15.github.io" />
-            <meta name="google-site-verification" content="WYAQh2p6n6VJfRhtdEE9Zmd9mWU8iDs_gmCz3BjrQ_o" />
+            <meta name="google-site-verification" content="2tG9JnOT3BhG1wK6wvHuYbfJqzXu1D3aosqBoAMYHIA" />
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="Milind Goel" />
