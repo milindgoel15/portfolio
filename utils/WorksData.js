@@ -1,10 +1,10 @@
 let WorksData = [
    {
       id: 1,
-      title: 'Personal Portfolio',
+      title: 'Personal Portfolio - V2.1',
       desc: 'Designed personal Portfolio website for myself',
       lang: 'Written in Next.js & TailwindCSS',
-      link: '',
+      link: 'https://github.com/milindgoel15/portfolio',
       delay: 0
    },
    {
