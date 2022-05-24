@@ -1,3 +1,27 @@
+<h3 align="center"> 
+   This is the version 2.1 of my personal portfolio, hosted on Vercel.
+</h3>
+
+<p align="center">Built with love by <a href="https://github.com/milindgoel15">Milind Goel</a>
+</p>
+
+
+
+<h3 align="center">Tech used:</h3>
+<div align="center">
+   <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
+   <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white">
+
+</div>
+
+---
+
+## For Forking this repo (Must Read!)
+
+You are free to fork this repo. Please give me proper credit by linking back to the <a href="https://github.com/milindgoel15">original source</a> and keeping the footer as it is. Thanks!
+
+___
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -13,10 +37,6 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Learn More
 

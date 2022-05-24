@@ -1,6 +1,24 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "2.5.0",
+  "description": "Personal portfolio built with Next.js & TailwindCSS, hosted on Vercel",
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "keywords": [
+    "Milind Goel, Web Developer, MilindGoel15, milindgoel15.github.io, portfolio"
+  ],
+  "author": {
+    "name": "Milind Goel",
+    "email": "milindgoel15@gmail.com",
+    "url": "https://github.com/milindgoel15"
+  },
+  "license": "AGPL",
+  "bugs": {
+    "url": "https://github.com/milindgoel15/portfolio/issues"
+  },
+  "homepage": "https://github.com/milindgoel15/portfolio#readme",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,12 +27,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^6.3.3",
     "next": "12.1.6",
+    "next-themes": "^0.2.0",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-animated-cursor": "^2.4.0",
+    "react-dom": "18.1.0",
+    "sass": "^1.52.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.7",
     "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
   }
 }
