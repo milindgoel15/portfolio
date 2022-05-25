@@ -23,8 +23,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {isDesktopMode && <Cursor />}
       <ThemeProvider attribute='class'>
+        {isDesktopMode && <Cursor />}
         <Header />
         <Component {...pageProps} />
         <Footer />
