@@ -16,7 +16,7 @@ export default function Home() {
           Hi! I&apos;m Milind Goel
         </motion.h2>
         <motion.p initial={{ opacity: 0, translateY: '50px' }} whileInView={{ opacity: 1, translateY: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="text-xl text-black dark:text-white py-8 px-3 xl:mx-80 2xl:mx-110 md:text-2xl heading">
-          a Front-End Web Developer, UI/UX Designer based in India
+          a Web Developer, UI/UX Designer based in India
         </motion.p>
 
         <div className="hidden md:block w-96 h-96 md:ml-128 lg:ml-162 xl:ml-180 pointer-events-none absolute border-2 border-gray-600 rounded-full"></div>
