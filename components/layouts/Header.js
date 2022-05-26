@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTheme } from "next-themes";
 import Link from 'next/link';
 
@@ -8,40 +8,19 @@ import NavLinks from './partials/NavLinks';
 import Hamburger from "../elements/Hamburger";
 import Cross from '../elements/Cross';
 import Logo from "../elements/Logo";
-import LightModeButton from './partials/LightModeButton';
-import DarkModeButton from './partials/DarkModeButton';
+import ThemeContext from '../../contexts/ThemeContext';
+import ThemeChanger from './ThemeChanger';
 
 let Header = () => {
    let [isNavBarOpen, setNavBarOpen] = useState(false);
    let { systemTheme, theme, setTheme } = useTheme();
    let [mounted, setMounted] = useState(false);
 
-   useEffect(() => {
-      setMounted(true);
-   }, []);
-
-   let setLightMode = () => {
-      setTheme('light')
-   }
-   let setDarkMode = () => {
-      setTheme('dark')
-   }
-   
-   let renderThemeChanger = () => {
-      if (!mounted) return null;
-      
-      let currentTheme = theme === 'system' ? systemTheme : theme;
-
-      if (currentTheme === 'dark') {
-         return (
-            <LightModeButton setLightMode={setLightMode} />
-         )
-      } else {
-         return (
-            <DarkModeButton setDarkMode={setDarkMode} />
-         )
-      }
-   }
+   let renderThemeChanger = (
+      <ThemeContext.Provider value={{systemTheme, theme, setTheme, mounted, setMounted}}>
+         <ThemeChanger />
+      </ThemeContext.Provider>
+   )
 
    return (
       <>
@@ -79,7 +58,7 @@ let Header = () => {
 
                <div className='flex justify-center gap-5 items-center'>
                   <span className='flex items-center z-10 md:hidden'>
-                     {renderThemeChanger()}
+                     {renderThemeChanger}
                   </span>
                   <button onClick={() => setNavBarOpen(!isNavBarOpen)} className="md:hidden transition-all duration-200 z-10 focus:outline-none">
                      {isNavBarOpen ? <Cross /> : <Hamburger />}
@@ -89,7 +68,7 @@ let Header = () => {
 
             <nav className='flex gap-6'>
                <span className='hidden md:flex items-center'>
-                  {renderThemeChanger()}
+                  {renderThemeChanger}
                </span>
                <ul onClick={() => setNavBarOpen(false)} className={`md:flex md:items-center z-[1] text-black dark:text-white text-center md:z-auto md:static absolute w-full left-0 md:w-auto dark:bg-secondary md:dark:bg-transparent backdrop-blur md:backdrop-blur-none md:py-0 space-x-4 transition-all ease-in duration-400 ${isNavBarOpen ? 'top-[95px]' : 'top-[-400px]'} `}>
                   {
