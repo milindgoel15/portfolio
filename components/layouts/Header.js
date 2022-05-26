@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import Link from 'next/link';
 
 import HeaderData from '../../utils/HeaderData';
 import NavLinks from './partials/NavLinks';
 import Hamburger from "../elements/Hamburger";
 import Cross from '../elements/Cross';
 import Logo from "../elements/Logo";
-import Link from 'next/link';
-import Sun from '../elements/Sun';
-import Moon from '../elements/Moon';
+import LightModeButton from './partials/LightModeButton';
+import DarkModeButton from './partials/DarkModeButton';
 
 let Header = () => {
    let [isNavBarOpen, setNavBarOpen] = useState(false);
@@ -20,22 +20,25 @@ let Header = () => {
       setMounted(true);
    }, []);
 
+   let setLightMode = () => {
+      setTheme('light')
+   }
+   let setDarkMode = () => {
+      setTheme('dark')
+   }
+   
    let renderThemeChanger = () => {
       if (!mounted) return null;
-
+      
       let currentTheme = theme === 'system' ? systemTheme : theme;
 
       if (currentTheme === 'dark') {
          return (
-            <button aria-label='Set Light Mode' onClick={() => setTheme('light')} >
-               <Sun />
-            </button>
+            <LightModeButton setLightMode={setLightMode} />
          )
       } else {
          return (
-            <button aria-label='Set Dark Mode' onClick={() => setTheme('dark')}>
-               <Moon />
-            </button>
+            <DarkModeButton setDarkMode={setDarkMode} />
          )
       }
    }

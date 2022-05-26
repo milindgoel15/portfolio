@@ -16,7 +16,7 @@ let Sun = (props, {rotate}) => {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6 mr-2 transition-all duration-200 fill-white hover:fill-blue-500 stroke-white hover:stroke-blue-500"
+      className="h-6 w-6 transition-all duration-200 fill-white group-hover:fill-blue-500 stroke-white group-hover:stroke-blue-500"
       viewBox="0 0 24 24"
       strokeWidth={2}
       variants={rotateAnim}
