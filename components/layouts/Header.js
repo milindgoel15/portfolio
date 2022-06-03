@@ -46,6 +46,7 @@ let Header = () => {
             <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
             <link rel="manifest" href="/favicons/site.webmanifest" />
+            <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "91cf893148704fe5a51a419b2c0282fa"}'></script>
          </Head>
 
          <header className="max-w-7xl mx-auto px-8 md:mx-8 flex xl:mx-auto h-24 items-center justify-between">
