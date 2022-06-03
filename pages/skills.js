@@ -25,7 +25,6 @@ let skills = () => {
                            key={props.id}
                            head={props.head}
                            lang={props.lang}
-                           skill={props.skill}
                            delay={props.delay}
                         />
                      ))

@@ -23,7 +23,6 @@ let Cursor = () => {
                'a',
                'button',
                '.heading',
-               '.skillCard'
             ]}
          />
       </>

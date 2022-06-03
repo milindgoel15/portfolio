@@ -17,7 +17,7 @@ let Header = () => {
    let [mounted, setMounted] = useState(false);
 
    let renderThemeChanger = (
-      <ThemeContext.Provider value={{systemTheme, theme, setTheme, mounted, setMounted}}>
+      <ThemeContext.Provider value={{ systemTheme, theme, setTheme, mounted, setMounted }}>
          <ThemeChanger />
       </ThemeContext.Provider>
    )
@@ -48,41 +48,36 @@ let Header = () => {
             <link rel="manifest" href="/favicons/site.webmanifest" />
          </Head>
 
-         <header className="max-w-7xl mx-auto px-8 md:mx-8 md:flex xl:mx-auto md:items-center md:justify-between">
-            <nav className="flex justify-between items-center h-24">
+         <header className="max-w-7xl mx-auto px-8 md:mx-8 flex xl:mx-auto h-24 items-center justify-between">
                <Link href="/">
                   <a className='z-10 cursor-pointer'>
                      <Logo alt="Logo" />
                   </a>
                </Link>
 
-               <div className='flex justify-center gap-5 items-center'>
-                  <span className='flex items-center z-10 md:hidden'>
-                     {renderThemeChanger}
-                  </span>
-                  <button onClick={() => setNavBarOpen(!isNavBarOpen)} className="md:hidden transition-all duration-200 z-10 focus:outline-none">
-                     {isNavBarOpen ? <Cross /> : <Hamburger />}
-                  </button>
-               </div>
-            </nav>
+               <nav className='flex gap-6'>
+                  <div className='flex justify-center gap-5 items-center'>
+                     <span className='flex items-center z-10 '>
+                        {renderThemeChanger}
+                     </span>
+                     <button onClick={() => setNavBarOpen(!isNavBarOpen)} className="md:hidden transition-all duration-200 z-10 focus:outline-none">
+                        {isNavBarOpen ? <Cross /> : <Hamburger />}
+                     </button>
+                  </div>
 
-            <nav className='flex gap-6'>
-               <span className='hidden md:flex items-center'>
-                  {renderThemeChanger}
-               </span>
-               <ul onClick={() => setNavBarOpen(false)} className={`md:flex md:items-center z-[1] text-black dark:text-white text-center md:z-auto md:static absolute w-full left-0 md:w-auto dark:bg-secondary md:dark:bg-transparent backdrop-blur md:backdrop-blur-none md:py-0 space-x-4 transition-all ease-in duration-400 ${isNavBarOpen ? 'top-[95px]' : 'top-[-400px]'} `}>
-                  {
-                     HeaderData.map(props => (
-                        <NavLinks
-                           key={props.id}
-                           title={props.title}
-                           link={props.link}
-                           target={props.target}
-                        />
-                     ))
-                  }
-               </ul>
-            </nav>
+                  <ul onClick={() => setNavBarOpen(false)} className={`md:flex md:items-center z-[1] text-black dark:text-white text-center md:z-auto md:static absolute w-full left-0 md:w-auto dark:bg-secondary md:dark:bg-transparent backdrop-blur md:backdrop-blur-none md:py-0 space-x-4 transition-all ease-in duration-400 ${isNavBarOpen ? 'top-[95px]' : 'top-[-400px]'} `}>
+                     {
+                        HeaderData.map(props => (
+                           <NavLinks
+                              key={props.id}
+                              title={props.title}
+                              link={props.link}
+                              target={props.target}
+                           />
+                        ))
+                     }
+                  </ul>
+               </nav>
             <div className="hidden md:block w-96 h-96 -ml-56 pointer-events-none absolute  border-2 border-gray-600 rounded-full"></div>
          </header>
       </>
