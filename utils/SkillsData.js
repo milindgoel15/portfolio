@@ -38,7 +38,7 @@ let SkillsData = [
    {
       id: 7,
       head: 'JavaScript Library',
-      lang: 'React.js',
+      lang: 'React.js, AOS, JQuery',
       delay: 0.14
    },
    {

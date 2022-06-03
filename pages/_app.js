@@ -20,6 +20,9 @@ function MyApp({ Component, pageProps }) {
     window.addEventListener("resize", updateComp);
     return () => window.removeEventListener("resize", updateComp);
   });
+  useEffect(() => {
+    console.log("%cMade with ❤︎️ by Milind Goel", "background:#14161a;color:#fff;padding:0.5em 1em;line-height:1.8;")
+  }, [])
 
   return (
     <>
