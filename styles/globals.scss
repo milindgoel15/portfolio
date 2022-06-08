@@ -58,3 +58,9 @@ html {
    scrollbar-color: var(--accent-color) var(--background);
 }
 /* custom scrollbar */
+
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before {
+   @apply bg-black dark:bg-white h-[0.35em]
+}

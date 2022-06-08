@@ -18,17 +18,17 @@ let works = () => {
 
             <section className="flex justify-center">
 
-               <div className="grid grid-rows-6 gap-2 sm:mt-12 sm:grid-cols-2 sm:grid-rows-3 sm:gap-6 lg:grid-col-2 lg:grid-flow-col lg:gap-8 ">
+               <div className="grid relative grid-rows-6 gap-2 sm:mt-12 sm:grid-cols-2 sm:grid-rows-3 sm:gap-6 lg:grid-col-2 lg:grid-flow-col lg:gap-8 ">
 
                   {
-                     WorksData.map(props => (
+                     WorksData.map((props, i) => (
                         <WorkCard
                            key={props.id}
                            title={props.title}
                            desc={props.desc}
                            lang={props.lang}
                            link={props.link}
-                           delay={props.delay}
+                           i={i}
                         />
                      ))
                   }

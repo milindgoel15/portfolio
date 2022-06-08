@@ -17,15 +17,15 @@ let skills = () => {
 
             <section className="flex justify-center">
 
-               <div className="grid grid-rows-8 gap-2 sm:grid-cols-2 sm:grid-rows-5 sm:mx-14 sm:mt-12 lg:grid-col-3 lg:grid-rows-3 lg:grid-flow-col lg:gap-5">
+               <div className="grid relative grid-rows-8 gap-2 sm:grid-cols-2 sm:grid-rows-5 sm:mx-14 sm:mt-12 lg:grid-col-3 lg:grid-rows-3 lg:grid-flow-col lg:gap-5">
 
                   {
-                     SkillsData.map(props => (
+                     SkillsData.map((props, i) => (
                         <SkillCard
                            key={props.id}
                            head={props.head}
                            lang={props.lang}
-                           delay={props.delay}
+                           i={i}
                         />
                      ))
                   }

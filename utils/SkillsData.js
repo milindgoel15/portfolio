@@ -2,56 +2,47 @@ let SkillsData = [
    {
       id: 1,
       head: 'Web Designing',
-      lang: 'Prototyping & UI/UX Designing',
-      delay: 0
+      lang: 'Prototyping & UI/UX Designing'
    },
    {
       id: 2,
       head: 'CSS Frameworks',
-      lang: 'TailwindCSS',
-      delay: 0.1
+      lang: 'TailwindCSS'
    },
    {
       id: 3,
       head: 'Web Development',
-      lang: 'HTML/CSS/JS',
-      delay: 0.09
+      lang: 'HTML/CSS/JS'
    },
    {
       id: 4,
       head: 'Version Control',
-      lang: 'Git, GitHub',
-      delay: 0.12
+      lang: 'Git, GitHub'
    },
    {
       id: 5,
       head: 'Database Languages',
-      lang: 'PL-SQL, SQL, MongoDB',
-      delay: 0.12
+      lang: 'PL-SQL, SQL, MongoDB'
    },
    {
       id: 6,
       head: 'JavaScript Framework',
-      lang: 'Angular, Next.js',
-      delay: 0.1
+      lang: 'Angular, Next.js'
    },
    {
       id: 7,
       head: 'JavaScript Library',
-      lang: 'React.js, AOS, JQuery',
-      delay: 0.14
+      lang: 'React.js, AOS, JQuery'
    },
    {
       id: 8,
       head: 'OOP',
-      lang: 'C/C++ & Python',
-      delay: 0.14
+      lang: 'C/C++ & Python'
    },
    {
       id: 9,
       head: 'Web Application',
-      lang: 'Java',
-      delay: 0.11
+      lang: 'Java'
    }
 ]
 

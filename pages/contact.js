@@ -16,17 +16,17 @@ let contact = () => {
 
             <section className="flex justify-center">
 
-               <div className="grid grid-rows-6 gap-4 sm:grid-cols-2 sm:grid-rows-3 sm:mt-6 sm:gap-8 lg:grid-col-2 lg:grid-rows-3 lg:grid-flow-col lg:gap-12">
+               <div className="grid relative grid-rows-6 gap-4 sm:grid-cols-2 sm:grid-rows-3 sm:mt-6 sm:gap-8 lg:grid-col-2 lg:grid-rows-3 lg:grid-flow-col lg:gap-12">
 
                   {
-                     ContactData.map(props => (
+                     ContactData.map((props, i) => (
                         <ContactCard
                            key={props.id}
                            image={props.image}
                            link={props.link}
                            social={props.social}
                            username={props.username}
-                           delay={props.delay}
+                           i={i}
                         />
                      ))
                   }

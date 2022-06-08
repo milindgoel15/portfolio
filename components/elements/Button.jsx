@@ -5,13 +5,14 @@ import { motion } from "framer-motion"
 let Button = (props) => {
    let hidden = {
       opacity: 0,
-      translateY: '15px'
+      translateY: '16px'
    }
    let show = {
       opacity: 1,
       translateY: 0,
       transition: {
-         duration: 0.25
+         duration: 0.35,
+         ease: 'easeIn'
       }
    }
 

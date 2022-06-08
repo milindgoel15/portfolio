@@ -4,6 +4,7 @@ import '../styles/globals.scss'
 import { ThemeProvider } from 'next-themes'
 import Cursor from '../components/layouts/Cursor'
 import { useState, useEffect } from 'react'
+import Cloudflare from '../components/layouts/Cloudflare'
 
 function MyApp({ Component, pageProps }) {
   let desktop;
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Cloudflare />
       <ThemeProvider attribute='class'>
         {isDesktopMode && <Cursor />}
         <Header />

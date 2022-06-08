@@ -11,48 +11,42 @@ let ContactData = [
       social: 'LinkedIn',
       username: '@milindgoel15',
       link: 'https://linkedin.com/in/milindgoel15',
-      image: <LinkedIn alt="LinkedIn" />,
-      delay: 0
+      image: <LinkedIn alt="LinkedIn" />
    },
    {
       id: 2,
       social: 'Telegram',
       username: '@milindgoel15',
       link: 'https://telegram.me/milindgoel15',
-      image: <Telegram alt="Telegram" />,
-      delay: 0.1
+      image: <Telegram alt="Telegram" />
    },
    {
       id: 3,
       social: 'Email',
       username: 'milindgoel15@gmail.com',
       link: 'mailto:milindgoel15@gmail.com',
-      image: <Email alt="Email" />,
-      delay: 0.08
+      image: <Email alt="Email" />
    },
    {
       id: 4,
       social: 'YouTube',
       username: '@milindgoel15',
       link: 'https://youtube.com/milindgoel15',
-      image: <YouTube alt="YouTube" />,
-      delay: 0.12
+      image: <YouTube alt="YouTube" />
    },
    {
       id: 5,
       social: 'GitHub',
       username: '@milindgoel15',
       link: 'https://github.com/milindgoel15',
-      image: <GitHub alt="GitHub" />,
-      delay: 0.12
+      image: <GitHub alt="GitHub" />
    },
    {
       id: 6,
       social: 'Instagram',
       username: '@milindgoel15',
       link: 'https://instagram.com/milindgoel15',
-      image: <Instagram alt="Instagram" />,
-      delay: 0.1
+      image: <Instagram alt="Instagram" />
    },
 ]
 
