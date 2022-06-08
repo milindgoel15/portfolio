@@ -36,8 +36,8 @@ let SkillsData = [
    },
    {
       id: 8,
-      head: 'OOP',
-      lang: 'C/C++ & Python'
+      head: 'Web Optimization',
+      lang: 'Responsive Designing & SEO'
    },
    {
       id: 9,
