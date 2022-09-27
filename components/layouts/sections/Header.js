@@ -5,11 +5,11 @@ import Link from 'next/link';
 import Burger from "@animated-burgers/burger-rotate"
 import '@animated-burgers/burger-rotate/dist/styles.css'
 
-import HeaderData from '../../utils/HeaderData';
-import NavLinks from './partials/NavLinks';
-import Logo from "../elements/Logo";
-import ThemeContext from '../../contexts/ThemeContext';
-import ThemeChanger from './ThemeChanger';
+import HeaderData from '../../../utils/HeaderData';
+import NavLinks from '../partials/NavLinks';
+import Logo from "../../elements/Logo";
+import ThemeContext from '../../../contexts/ThemeContext';
+import ThemeChanger from '../ThemeChanger';
 
 let Header = () => {
    let [isNavBarOpen, setNavBarOpen] = useState(false);
