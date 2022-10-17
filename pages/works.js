@@ -26,6 +26,7 @@ let works = () => {
                            key={props.id}
                            title={props.title}
                            desc={props.desc}
+                           role={props.role}
                            lang={props.lang}
                            link={props.link}
                            i={i}
