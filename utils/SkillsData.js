@@ -41,8 +41,8 @@ let SkillsData = [
    },
    {
       id: 9,
-      head: 'Web Application',
-      lang: 'Java'
+      head: 'Application Development',
+      lang: 'Flutter'
    }
 ]
 
