@@ -2,7 +2,7 @@ let WorksData = [
    {
       id: 1,
       title: 'Retro Weather',
-      desc: 'a material design, live-weather app for android (currently in alpha stage)',
+      desc: 'a material design, live-weather app for android with Material You theming.',
       role: 'Lead developer & Designer',
       lang: 'Flutter',
       link: 'https://telegram.me/RetroWeather'
@@ -26,7 +26,7 @@ let WorksData = [
    {
       id: 4,
       title: 'Retro Music Player',
-      desc: 'a material design, offline music player for Android.',
+      desc: 'a material design, offline music player for Android with Material You theming.',
       role: 'Member and contributor',
       lang: 'Kotlin, Java, HTML5',
       link: 'https://github.com/RetroMusicPlayer'

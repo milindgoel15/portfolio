@@ -18,7 +18,7 @@ let works = () => {
 
             <section className="flex justify-center">
 
-               <div className="grid relative grid-rows-6 gap-2 sm:mt-12 sm:grid-cols-2 sm:grid-rows-3 sm:gap-6 lg:grid-col-2 lg:grid-flow-col lg:gap-8 ">
+               <div className="grid relative grid-rows-6 gap-2 sm:mt-12 sm:grid-cols-2 sm:grid-rows-3 sm:gap-6 lg:grid-col-2 lg:gap-8 ">
 
                   {
                      WorksData.map((props, i) => (
