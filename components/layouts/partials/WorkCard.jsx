@@ -15,7 +15,7 @@ let WorkCard = (props) => {
             delay: `${props.i}` * 0.05,
             ease: "easeIn",
           }}
-          className="py-8 px-6 sm:h-80 sm:px-10 md:px-8 h-[17rem] bg-blue-600 hover:bg-blue-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 md:w-96 sm:mt-0 md:h-72 lg:h-72 lg:w-[30rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl group"
+          className="py-4 sm:py-8 px-6 sm:h-80 sm:px-10 md:px-8 h-[17rem] bg-blue-600 hover:bg-blue-700 border-transparent rounded-md shadow-md space-y-2 mt-5 ml-4 w-11/12 sm:ml-0 sm:w-80 md:w-96 sm:mt-0 md:h-72 lg:h-72 lg:w-[30rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl group foldWorkCard"
         >
           <div className="flex justify-between items-center">
             <h2 className="text-2xl py-5 text-white font-semibold leading-6">

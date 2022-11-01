@@ -64,3 +64,30 @@ html {
 .burger .burger-lines:before {
    @apply bg-black dark:bg-white h-[0.35em]
 }
+
+@media screen and (max-width: 280px) {
+   .foldIndexTitle {
+      font-size: 3rem;
+   }
+   .foldWorkCard {
+      height: 22rem;
+      margin-left: 0.8rem;
+   }
+   .foldSkillCard {
+      height: 10rem;
+      width: 90%;
+      margin-left: 0.8rem;
+      padding: 1rem;
+   }
+   .foldContactCard {
+      height: 10rem;
+      padding: 0;
+
+      .foldContactIcon {
+         display: none;
+      }
+   }
+   .foldButton {
+      font-size: 1rem;
+   }
+}

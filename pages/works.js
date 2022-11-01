@@ -16,9 +16,9 @@ let works = () => {
          <main className="py-20 text-center">
             <motion.h2 initial={{ opacity: 0, translateY: '30px' }} whileInView={{ opacity: 1, translateY: 0, transitionDuration: 0.5  }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="font-extrabold text-2xl py-5 xl:mx-80 2xl:mx-110 text-black dark:text-white md:text-4xl heading">Recents Works & Contributions</motion.h2>
 
-            <section className="flex justify-center">
+            <section className="flex justify-center items-center">
 
-               <div className="grid relative grid-rows-6 gap-2 sm:mt-12 sm:grid-cols-2 sm:grid-rows-3 sm:gap-6 lg:grid-col-2 lg:gap-8 ">
+               <div className="grid relative grid-rows-6 gap-2 sm:mt-12 sm:grid-cols-2 sm:grid-rows-3 lg:gap-6 lg:grid-col-2 xl:gap-8 ">
 
                   {
                      WorksData.map((props, i) => (

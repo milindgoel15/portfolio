@@ -14,7 +14,7 @@ let contact = () => {
          <main className="py-20 text-center " >
             <motion.h2 initial={{ opacity: 0, translateY: '30px' }} whileInView={{ opacity: 1, translateY: 0, transitionDuration: 0.5 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="font-extrabold text-4xl py-8 xl:mx-110 text-black dark:text-white heading">Connect with me</motion.h2>
 
-            <section className="flex justify-center">
+            <section className="flex justify-center items-center">
 
                <div className="grid relative grid-rows-6 gap-4 sm:grid-cols-2 sm:grid-rows-3 sm:mt-6 sm:gap-8 lg:grid-col-2 lg:grid-rows-3 lg:grid-flow-col lg:gap-12">
 
