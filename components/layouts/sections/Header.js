@@ -57,10 +57,11 @@ let Header = () => {
          </Head>
 
          <header className="max-w-7xl mx-auto px-8 md:mx-8 flex xl:mx-auto h-24 items-center justify-between">
-            <Link href="/">
-               <a onClick={() => setNavBarOpen(false)} className='z-10 cursor-pointer'>
-                  <Logo alt="Logo" />
-               </a>
+            <Link
+               href="/"
+               onClick={() => setNavBarOpen(false)}
+               className='z-10 cursor-pointer'>
+               <Logo alt="Logo" />
             </Link>
 
             <nav className='flex gap-6'>
@@ -89,7 +90,7 @@ let Header = () => {
             <div className="hidden md:block w-96 h-96 -ml-56 pointer-events-none absolute  border-2 border-gray-600 rounded-full"></div>
          </header>
       </>
-   )
+   );
 }
 
 export default Header;
