@@ -7,6 +7,15 @@ import React, { useState, useEffect } from 'react'
 import Cloudflare from '../components/layouts/Cloudflare'
 import SnowFlakes from '../components/layouts/SnowFlakes'
 import DesktopContext from '../contexts/DesktopContext'
+import localFont from '@next/font/local'
+
+const raisonne = localFont({
+  src: [{ path: '../public/fonts/raisonne.woff2' }, { path: '../public/fonts/raisonne.woff' }],
+  display: 'swap',
+  weight: '400',
+  style: 'normal',
+  variable: '--font-raisonne'
+})
 
 function MyApp({ Component, pageProps }) {
   let desktop;
@@ -22,7 +31,7 @@ function MyApp({ Component, pageProps }) {
     return () => window.removeEventListener("resize", updateComp);
   });
 
-  let renderDesktopChanger = <DesktopContext.Provider value={{isDesktopMode}}>
+  let renderDesktopChanger = <DesktopContext.Provider value={{ isDesktopMode }}>
     <SnowFlakes />
   </DesktopContext.Provider>
 
@@ -32,14 +41,16 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Cloudflare />
-      {renderDesktopChanger}
-      <ThemeProvider attribute='class'>
-        {isDesktopMode && <Cursor />}
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </ThemeProvider>
+      <main className={`${raisonne.variable} font-raisonne`}>
+        <Cloudflare />
+        {renderDesktopChanger}
+        <ThemeProvider attribute='class'>
+          {isDesktopMode && <Cursor />}
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </ThemeProvider>
+      </main>
     </>
   )
 }

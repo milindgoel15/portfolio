@@ -1,5 +1,3 @@
-let defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
   darkMode: "class",
   content: [
@@ -9,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'raisonne': ['Raisonne', ...defaultTheme.fontFamily.sans]
+        'raisonne': ['var(--font-raisonne)']
       },
       colors: {
         'primary': 'rgb(20 22 26)',

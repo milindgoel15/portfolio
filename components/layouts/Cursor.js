@@ -8,7 +8,7 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 let Cursor = () => {
    let { systemTheme, theme } = useTheme();
    let currentTheme = theme === 'system' ? systemTheme : theme;
-   
+
    return (
       <>
          <AnimatedCursor

@@ -9,24 +9,12 @@
 }
 
 @layer base {
-   @font-face {
-      font-family: 'Raisonne';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url('/fonts/raisonne.woff') format('woff'), url('/fonts/raisonne.woff2') format('woff2');
-   }
-
    ::-webkit-scrollbar {
       @apply bg-blue-50 dark:bg-primary
    }
 
    html, body {
       @apply overflow-x-hidden
-   }
-
-   html {
-      @apply font-raisonne
    }
 
    body {
