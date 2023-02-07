@@ -5,7 +5,7 @@ import DesktopContext from '../../contexts/DesktopContext';
 
 let SnowFlakes = () => {
    let { isDesktopMode } = useContext(DesktopContext);
-   let isWinter = true;
+   let isWinter = false;
    let renderSnow = (isDesktopMode && <Snowfall
       snowflakeCount={30}
       style={{

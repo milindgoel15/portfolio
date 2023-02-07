@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     window.addEventListener("resize", updateComp);
     return () => window.removeEventListener("resize", updateComp);
-  });
+  }, []);
 
   let renderDesktopChanger = <DesktopContext.Provider value={{ isDesktopMode }}>
     <SnowFlakes />
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <main className={`${raisonne.variable} font-raisonne`}>
         <Cloudflare />
-        {renderDesktopChanger}
+        {/* {renderDesktopChanger} */}
         <ThemeProvider attribute='class'>
           {isDesktopMode && <Cursor />}
           <Header />
