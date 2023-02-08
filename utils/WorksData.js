@@ -1,11 +1,11 @@
 let WorksData = [
    {
       id: 1,
-      title: 'Retro Weather',
+      title: 'WeatherWise: Live & Forecast',
       desc: 'a material design, live-weather app for android with Material You theming.',
       role: 'Lead developer & Designer',
       lang: 'Flutter',
-      link: 'https://telegram.me/RetroWeather'
+      link: 'https://telegram.me/WeatherWiseApp'
    },
    {
       id: 2,
