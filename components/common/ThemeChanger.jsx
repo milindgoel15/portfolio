@@ -1,6 +1,6 @@
 import { useEffect, useContext } from "react";
-import LightModeButton from './partials/LightModeButton';
-import DarkModeButton from './partials/DarkModeButton';
+import LightModeButton from '../../components/layouts/partials/LightModeButton';
+import DarkModeButton from '../../components/layouts/partials/DarkModeButton';
 import ThemeContext from "../../contexts/ThemeContext";
 
 let ThemeChanger = () => {

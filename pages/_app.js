@@ -2,11 +2,12 @@ import Footer from '../components/layouts/sections/Footer'
 import Header from '../components/layouts/sections/Header'
 import '../styles/globals.scss'
 import { ThemeProvider } from 'next-themes'
-import Cursor from '../components/layouts/Cursor'
 import React, { useState, useEffect } from 'react'
-import Cloudflare from '../components/layouts/Cloudflare'
-import SnowFlakes from '../components/layouts/SnowFlakes'
-import DesktopContext from '../contexts/DesktopContext'
+import Cloudflare from '../components/common/Cloudflare'
+import HeadDetails from '../components/common/headDetails'
+// import SnowFlakes from '../components/common/SnowFlakes'
+import Cursor from '../components/common/Cursor'
+// import DesktopContext from '../contexts/DesktopContext'
 import localFont from '@next/font/local'
 
 const raisonne = localFont({
@@ -18,29 +19,32 @@ const raisonne = localFont({
 })
 
 function MyApp({ Component, pageProps }) {
-  let desktop;
-  if (typeof window == 'object') {
-    desktop = window.innerWidth > 1280;
-  }
-  let [isDesktopMode, setDesktopMode] = useState(desktop);
-  let updateComp = () => {
-    setDesktopMode(desktop)
-  }
-  useEffect(() => {
-    window.addEventListener("resize", updateComp);
-    return () => window.removeEventListener("resize", updateComp);
-  }, []);
+  let [isDesktopMode, setDesktopMode] =  useState(false);
+  let desktop = typeof window == 'object' && window.innerWidth > 1280;
 
-  let renderDesktopChanger = <DesktopContext.Provider value={{ isDesktopMode }}>
-    <SnowFlakes />
-  </DesktopContext.Provider>
+  useEffect(() => {
+    const updateComp = () => {
+      setDesktopMode(desktop)
+    }
+
+    updateComp()
+    window.addEventListener('resize', updateComp)
+    return () => {
+      window.removeEventListener('resize', updateComp)
+    }
+  }, [])
 
   useEffect(() => {
     console.log("%cMade with ❤︎️ by Milind Goel", "background:#14161a;color:#fff;padding:0.5em 1em;line-height:1.8;")
   }, [])
 
+  // let renderDesktopChanger = <DesktopContext.Provider value={{ isDesktopMode }}>
+  //   <SnowFlakes />
+  // </DesktopContext.Provider>
+
   return (
     <>
+    <HeadDetails />
       <main className={`${raisonne.variable} font-raisonne`}>
         <Cloudflare />
         {/* {renderDesktopChanger} */}
