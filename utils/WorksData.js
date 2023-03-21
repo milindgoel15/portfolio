@@ -5,7 +5,7 @@ let WorksData = [
       desc: 'a material design, live-weather app for android with Material You theming.',
       role: 'Lead developer & Designer',
       lang: 'Flutter, Firebase Analytics',
-      link: 'https://github.com/WeatherWiseApp/WeatherWise-Releases'
+      link: 'https://github.com/MGAndroidProjects/WeatherWise-Releases'
    },
    {
       id: 2,
