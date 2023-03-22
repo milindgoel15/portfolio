@@ -3,79 +3,84 @@
 @tailwind utilities;
 
 :root {
-   --background: #14161a;
-   --accent-color: rgb(13, 115, 231);
-   --hover-accent-color: #1361b9;
+	--background: #14161a;
+	--accent-color: rgb(13, 115, 231);
+	--hover-accent-color: #1361b9;
 }
 
 @layer base {
-   ::-webkit-scrollbar {
-      @apply bg-blue-50 dark:bg-primary
-   }
+	::-webkit-scrollbar {
+		@apply bg-blue-50 dark:bg-primary;
+	}
 
-   html, body {
-      @apply overflow-x-hidden
-   }
+	html,
+	body {
+		@apply overflow-x-hidden;
+	}
 
-   body {
-      @apply scroll-smooth bg-white dark:bg-primary
-   }
+	body {
+		@apply scroll-smooth bg-white dark:bg-primary;
+	}
 }
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-   width: 16px;
+	width: 16px;
 }
 
 ::-webkit-scrollbar-thumb {
-   background: var(--accent-color);
-   border-radius: 8px;
-   border: 4px solid transparent;
-   background-clip: content-box;
+	background: var(--accent-color);
+	border-radius: 8px;
+	border: 4px solid transparent;
+	background-clip: content-box;
 
-   &:hover {
-       background: var(--hover-accent-color);
-       border-radius: 8px;
-       border: 4px solid transparent;
-       background-clip: content-box;
-   }
+	&:hover {
+		background: var(--hover-accent-color);
+		border-radius: 8px;
+		border: 4px solid transparent;
+		background-clip: content-box;
+	}
 }
 
 html {
-   scrollbar-width: thin;
-   scrollbar-color: var(--accent-color) var(--background);
+	scrollbar-width: thin;
+	scrollbar-color: var(--accent-color) var(--background);
 }
+
 /* custom scrollbar */
 
 .burger .burger-lines,
 .burger .burger-lines:after,
 .burger .burger-lines:before {
-   @apply bg-black dark:bg-white h-[0.35em]
+	@apply bg-black dark:bg-white h-[0.35em];
 }
 
 @media screen and (max-width: 280px) {
-   .foldIndexTitle {
-      font-size: 3rem;
-   }
-   .foldWorkCard {
-      height: 22rem;
-      margin-left: 0.8rem;
-   }
-   .foldSkillCard {
-      height: 10rem;
-      width: 90%;
-      margin-left: 0.8rem;
-      padding: 1rem;
-   }
-   .foldContactCard {
-      height: 10rem;
-      padding: 0;
+	.foldIndexTitle {
+		font-size: 2rem;
+	}
 
-      .foldContactIcon {
-         display: none;
-      }
-   }
-   .foldButton {
-      font-size: 1rem;
-   }
+	.foldWorkCard {
+		height: 22rem;
+		margin-left: 0.8rem;
+	}
+
+	.foldSkillCard {
+		height: 10rem;
+		margin-left: 0.8rem;
+		padding: 1rem;
+	}
+
+	.foldContactCard {
+		height: 10rem;
+		padding: 0;
+
+		.foldContactIcon {
+			display: none;
+		}
+	}
+
+	.foldButton {
+		font-size: 1rem;
+	}
 }

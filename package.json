@@ -1,13 +1,13 @@
 {
   "name": "portfolio",
   "version": "2.5.0",
-  "description": "Personal portfolio built with Next.js & TailwindCSS, hosted on Vercel",
+  "description": "Personal portfolio built with Next.js, Typescript & TailwindCSS, hosted on Vercel",
   "repository": {
     "type": "git",
     "url": "git+"
   },
   "keywords": [
-    "Milind Goel, Web Developer, MilindGoel15, milindgoel.vercel.app, portfolio"
+    "Milind Goel, Web & Flutter Developer, MilindGoel15, milindgoel.vercel.app, portfolio"
   ],
   "author": {
     "name": "Milind Goel",
@@ -23,29 +23,32 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next build && next-sitemap --config nextSitemap.js",
+    "postbuild": "next build && next-sitemap --config sitemap.config.js",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@animated-burgers/burger-rotate": "^1.1.2",
-    "@next/font": "^13.1.6",
+    "@types/node": "18.15.5",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
     "classnames": "^2.3.2",
-    "framer-motion": "^9.0.1",
-    "next": "13.1.6",
-    "next-sitemap": "^3.1.50",
+    "framer-motion": "^10.7.0",
+    "next": "13.2.4",
+    "next-sitemap": "^4.0.6",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
-    "react-animated-cursor": "^2.5.2",
+    "react-animated-cursor-ts": "^2.5.2",
     "react-dom": "18.2.0",
     "react-snowfall": "^1.2.1",
-    "sass": "^1.58.0"
+    "sass": "^1.59.3",
+    "typescript": "5.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "eslint": "8.33.0",
-    "eslint-config-next": "13.1.6",
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.7"
   }
 }
