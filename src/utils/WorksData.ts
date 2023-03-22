@@ -9,10 +9,10 @@ let WorksData = [
    },
    {
       id: 2,
-      title: 'Personal Portfolio - V2.1',
+      title: 'Personal Portfolio - V2.5',
       desc: 'Designed personal Portfolio website for myself',
       role: 'Lead developer & Designer',
-      lang: 'Next.js & TailwindCSS',
+      lang: 'Next.js, Typescript & TailwindCSS',
       link: 'https://github.com/milindgoel15/portfolio'
    },
    {
@@ -20,7 +20,7 @@ let WorksData = [
       title: 'Abhishek Goel & Associates',
       desc: 'Website for a Chartered Accountant firm',
       role: 'Lead developer & Designer',
-      lang: 'React.js & TailwindCSS',
+      lang: 'React.js, Vite & TailwindCSS',
       link: 'https://abhishekgoelandassociates.com'
    },
    {
