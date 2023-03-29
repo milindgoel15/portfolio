@@ -25,6 +25,7 @@
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
+	background-color: var(--background);
 	width: 16px;
 }
 
