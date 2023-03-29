@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ContactData from "@/src/utils/ContactData";
 import ContactCard from "@/src/partials/ContactCard";
 
-let contact = () => {
+let contact = (): JSX.Element => {
 	return (
 		<>
 			<Head>

@@ -2,7 +2,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import Button from "@/src/common/Button";
 
-export default function Home() {
+let Home = (): JSX.Element => {
 	return (
 		<>
 			<Head>
@@ -42,4 +42,6 @@ export default function Home() {
 			</main>
 		</>
 	);
-}
+};
+
+export default Home;

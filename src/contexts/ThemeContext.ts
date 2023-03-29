@@ -4,15 +4,9 @@ import ThemeInterface from "../interfaces/ThemeInterface";
 let ThemeContext = createContext<ThemeInterface>({
    theme: "system",
    systemTheme: undefined,
-   setTheme: function (theme: string): void {
-      console.log(theme);
-
-   },
+   setTheme: (theme: string) => { },
    mounted: false,
-   setMounted: function (value: SetStateAction<boolean>): void {
-      console.log(value);
-
-   }
+   setMounted: (value: SetStateAction<boolean>) => { }
 })
 
 export default ThemeContext;

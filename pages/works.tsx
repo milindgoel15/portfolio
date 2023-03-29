@@ -4,7 +4,7 @@ import WorksData from "@/src/utils/WorksData";
 import WorkCard from "@/src/partials/WorkCard";
 import Button from "@/src/common/Button";
 
-let works = () => {
+let works = (): JSX.Element => {
 	return (
 		<>
 			<Head>

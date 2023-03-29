@@ -1,4 +1,6 @@
-let WorksData = [
+import WorksDataInterface from "../interfaces/WorkDataInterface";
+
+let WorksData: WorksDataInterface[] = [
    {
       id: 1,
       title: 'WeatherWise: Live & Forecast',
