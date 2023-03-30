@@ -50,12 +50,6 @@ html {
 
 /* custom scrollbar */
 
-.burger .burger-lines,
-.burger .burger-lines:after,
-.burger .burger-lines:before {
-	@apply bg-black dark:bg-white h-[0.35em];
-}
-
 @media screen and (max-width: 280px) {
 	.foldIndexTitle {
 		font-size: 2rem;
