@@ -22,7 +22,7 @@ let WorksData: WorksDataInterface[] = [
       title: 'Abhishek Goel & Associates',
       desc: 'Website for a Chartered Accountant firm',
       role: 'Lead developer & Designer',
-      lang: 'React.js, Vite & TailwindCSS',
+      lang: 'React.js, Vite, Typescript & TailwindCSS',
       link: 'https://abhishekgoelandassociates.com'
    },
    {
@@ -38,7 +38,7 @@ let WorksData: WorksDataInterface[] = [
       title: 'Milind Webcomm Services',
       desc: 'Website for Web Designing and E-Commerce operators',
       role: 'Lead developer & Designer',
-      lang: 'TailwindCSS & AlpineJS',
+      lang: 'React.js, Vite, Typescript & TailwindCSS',
       link: 'https://mwsretail.in'
    },
    {
