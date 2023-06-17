@@ -9,10 +9,6 @@
 }
 
 @layer base {
-	::-webkit-scrollbar {
-		@apply bg-blue-50 dark:bg-primary;
-	}
-
 	html,
 	body {
 		@apply overflow-x-hidden;
@@ -23,10 +19,14 @@
 	}
 }
 
-/* custom scrollbar */
+// /* custom scrollbar */
 ::-webkit-scrollbar {
-	background-color: var(--background);
+	background-color: #ffffff;
 	width: 16px;
+}
+
+html.dark ::-webkit-scrollbar {
+	background-color: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
