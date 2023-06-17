@@ -48,18 +48,21 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	return (
 		<>
 			<HeadDetails />
-			<main className={`${raisonne.variable} font-raisonne`}>
-				<Cloudflare />
-				<ThemeProvider attribute="class">
-					{/* <DesktopContext.Provider value={{ isDesktopMode }}>
+			<style jsx global>{`
+				html {
+					font-family: ${raisonne.style.fontFamily};
+				}
+			`}</style>
+			<Cloudflare />
+			<ThemeProvider attribute="class">
+				{/* <DesktopContext.Provider value={{ isDesktopMode }}>
 						<SnowFlakes />
 					</DesktopContext.Provider> */}
-					{isDesktopMode && <Cursor />}
-					<Header />
-					<Component {...pageProps} />
-					<Footer />
-				</ThemeProvider>
-			</main>
+				{isDesktopMode && <Cursor />}
+				<Header />
+				<Component {...pageProps} />
+				<Footer />
+			</ThemeProvider>
 		</>
 	);
 }
