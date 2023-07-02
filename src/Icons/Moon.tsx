@@ -16,7 +16,7 @@ let Moon = ({ rotate }: any) => {
 	return (
 		<motion.svg
 			xmlns="http://www.w3.org/2000/svg"
-			className="h-6 w-6 transition-all duration-200 fill-black group-hover:fill-blue-600 stroke-black group-hover:stroke-blue-600"
+			className="h-6 w-6 transition-all duration-200 fill-white group-hover:fill-blue-600 stroke-white group-hover:stroke-blue-600"
 			viewBox="0 0 24 24"
 			stroke="currentColor"
 			strokeWidth={2}

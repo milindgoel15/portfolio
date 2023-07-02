@@ -11,7 +11,7 @@ let NavLinks = (props: HeaderDataInterface) => {
 			>
 				<Link
 					href={props.link}
-					className="py-2 md:px-3 text-xl hover:text-blue-600 lg:hover:bg-blue-600 lg:hover:text-white rounded-md transition duration-300"
+					className="py-2 md:px-3 text-xl text-black dark:text-white hover:text-blue-600 lg:hover:bg-blue-600 lg:hover:text-white rounded-md transition duration-300"
 					target={props.target}
 				>
 					{props.title}
