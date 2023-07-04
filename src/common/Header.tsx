@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { Fade as Hamburger } from "hamburger-react";
-import Logo from "../Icons/Logo";
-import HeaderData from "../utils/HeaderData";
+import HeaderData from "../data/HeaderData";
 import NavLinks from "../partials/NavLinks";
 import Moon from "../Icons/Moon";
 import Sun from "../Icons/Sun";
 import SystemIcon from "../Icons/System";
 import ThemeButton from "./ThemeButton";
+import Logo from "../Icons/Logo";
 
 let Header = () => {
 	let [isNavBarOpen, setNavBarOpen] = useState(false);
@@ -23,13 +23,13 @@ let Header = () => {
 
 	return (
 		<>
-			<header className="max-w-7xl mx-auto px-8 md:mx-8 flex xl:mx-auto h-24 items-center justify-between">
+			<header className="max-w-7xl mx-auto pl-8 pr-4 sm:px-8 md:mx-8 flex xl:mx-auto h-24 items-center justify-between">
 				<Link
 					href="/"
 					onClick={() => setNavBarOpen(false)}
 					className="z-10 cursor-pointer"
 				>
-					<Logo aria-label="Logo" />
+					<Logo aria-label="Logo" className="w-8" />
 				</Link>
 
 				<nav className="flex gap-6">
@@ -91,7 +91,6 @@ let Header = () => {
 						))}
 					</ul>
 				</nav>
-				<div className="hidden md:block w-96 h-96 -ml-56 pointer-events-none absolute  border-2 border-gray-600 rounded-full"></div>
 			</header>
 		</>
 	);

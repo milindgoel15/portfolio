@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
 import SkillCard from "@/src/partials/SkillCard";
-import SkillsData from "@/src/utils/SkillsData";
+import SkillsData from "@/src/data/SkillsData";
 
 let skills = (): JSX.Element => {
 	return (
@@ -35,11 +35,8 @@ let skills = (): JSX.Element => {
 								id={props.id}
 							/>
 						))}
-
-						<div className="hidden md:block w-96 h-96 md:ml-128 lg:ml-162 xl:ml-174 pointer-events-none absolute border-2 border-gray-600 rounded-full"></div>
 					</div>
 				</section>
-				<div className="hidden md:block w-96 h-96 absolute -mt-80 -ml-56 pointer-events-none border-2 border-gray-600 rounded-full"></div>
 			</main>
 		</>
 	);

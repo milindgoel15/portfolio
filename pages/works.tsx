@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
-import WorksData from "@/src/utils/WorksData";
+import WorksData from "@/src/data/WorksData";
 import WorkCard from "@/src/partials/WorkCard";
 import Button from "@/src/common/Button";
 
@@ -40,12 +40,11 @@ let works = (): JSX.Element => {
 								id={props.id}
 							/>
 						))}
-
-						<div className="hidden md:block w-96 h-96 md:ml-136 lg:ml-162 -z-10 pointer-events-none absolute border-2 border-gray-600 rounded-full"></div>
 					</div>
 				</section>
-				<div className="hidden md:block w-96 h-96 absolute -ml-56 pointer-events-none border-2 border-gray-600 rounded-full"></div>
-
+				<div className={`w-96 h-96  pointer-events-none absolute -z-50`}>
+					<img src={"/blobs/bloblight.svg"} alt="blob" />
+				</div>
 				<Button
 					link="https://github.com/milindgoel15?tab=repositories"
 					targetValue="_blank"

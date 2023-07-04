@@ -19,6 +19,14 @@ let WorksData: WorksDataInterface[] = [
    },
    {
       id: 3,
+      title: 'GenesisOS',
+      desc: 'Website for GenesisOS, a Custom After Market OS based on AOSP',
+      role: 'Developer',
+      lang: 'Next.js, Typescript & TailwindCSS',
+      link: 'https://genesisos.vercel.app'
+   },
+   {
+      id: 4,
       title: 'Abhishek Goel & Associates',
       desc: 'Website for a Chartered Accountant firm',
       role: 'Lead developer & Designer',
@@ -26,7 +34,7 @@ let WorksData: WorksDataInterface[] = [
       link: 'https://abhishekgoelandassociates.com'
    },
    {
-      id: 4,
+      id: 5,
       title: 'Retro Music Player',
       desc: 'a material design, offline music player for Android with Material You theming.',
       role: 'Member and contributor',
@@ -34,20 +42,12 @@ let WorksData: WorksDataInterface[] = [
       link: 'https://github.com/RetroMusicPlayer'
    },
    {
-      id: 5,
+      id: 6,
       title: 'Milind Webcomm Services',
       desc: 'Website for Web Designing and E-Commerce operators',
       role: 'Lead developer & Designer',
       lang: 'React.js, Vite, Typescript & TailwindCSS',
       link: 'https://mwsretail.in'
-   },
-   {
-      id: 6,
-      title: 'Quiz Trivia',
-      desc: 'Quiz Trivia based on Trivia API',
-      role: 'Lead developer & Designer',
-      lang: 'Next.js, TailwindCSS & Open Trivia API',
-      link: 'https://github.com/milindgoel15/quiztrivia'
    },
 ]
 

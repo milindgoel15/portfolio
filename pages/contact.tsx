@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
-import ContactData from "@/src/utils/ContactData";
+import ContactData from "@/src/data/ContactData";
 import ContactCard from "@/src/partials/ContactCard";
 
 let contact = (): JSX.Element => {
@@ -37,8 +37,6 @@ let contact = (): JSX.Element => {
 								id={props.id}
 							/>
 						))}
-
-						<div className="hidden md:block w-96 h-96 md:ml-128 lg:ml-162 xl:ml-180 pointer-events-none absolute border-2 border-gray-600 rounded-full"></div>
 					</div>
 				</section>
 			</main>

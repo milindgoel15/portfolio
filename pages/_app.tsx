@@ -8,6 +8,7 @@ import Cloudflare from "@/src/common/Cloudflare";
 import Cursor from "@/src/common/Cursor";
 import Header from "@/src/common/Header";
 import Footer from "@/src/common/Footer";
+import BlobAnimation from "@/src/blobanimation/BlobAnimation";
 // import DesktopContext from "@/src/contexts/DesktopContext";
 // import SnowFlakes from "@/src/common/SnowFlakes";
 
@@ -58,8 +59,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 				{/* <DesktopContext.Provider value={{ isDesktopMode }}>
 						<SnowFlakes />
 					</DesktopContext.Provider> */}
+
 				{isDesktopMode && <Cursor />}
 				<Header />
+				<BlobAnimation />
 				<Component {...pageProps} />
 				<Footer />
 			</ThemeProvider>

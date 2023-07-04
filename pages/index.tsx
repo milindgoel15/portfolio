@@ -24,7 +24,7 @@ let Home = (): JSX.Element => {
 				>
 					Hi! I&apos;m Milind Goel
 				</motion.h2>
-				<div className="hidden md:block w-96 h-96 md:ml-128 lg:ml-162 xl:ml-180 pointer-events-none absolute border-2 border-gray-600 rounded-full"></div>
+
 				<motion.p
 					initial={{ opacity: 0, translateY: "50px" }}
 					whileInView={{ opacity: 1, translateY: 0 }}

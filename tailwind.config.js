@@ -21,19 +21,6 @@ module.exports = {
 			spacing: {
 				88: "22rem",
 			},
-			backgroundImage: {
-				"progress-gradient":
-					"linear-gradient(to right, rgb(255,211,61), rgb(234,74,170) 17%, rgb(179,75,255) 34%, rgb(1,254,255) 51%, rgb(255,211,61) 68%, rgb(234,74,170) 85%, rgb(179,75,255))",
-			},
-			keyframes: {
-				"progress-animation": {
-					"0%": { "background-position": "100%" },
-					"100%": { "background-position": "0" },
-				},
-			},
-			animation: {
-				progress: "progress-animation 2s linear infinite",
-			},
 			backgroundSize: {
 				length: "300% 100%",
 			},
