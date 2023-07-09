@@ -23,7 +23,7 @@ let SkillsData: SKillDataInterface[] = [
    },
    {
       id: 5,
-      title: 'Database languageuages',
+      title: 'Database languages',
       language: 'Hive, Realm, MongoDB, MySQL'
    },
    {
@@ -33,7 +33,7 @@ let SkillsData: SKillDataInterface[] = [
    },
    {
       id: 7,
-      title: 'JavaScript Library',
+      title: 'Javascript Libraries',
       language: 'React.js, AOS, Formik, Yup'
    },
    {
