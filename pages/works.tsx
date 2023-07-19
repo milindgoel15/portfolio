@@ -16,7 +16,7 @@ let works = (): JSX.Element => {
 				/>
 			</Head>
 
-			<main className="py-20 text-center">
+			<main className="pt-20 text-center">
 				<motion.h2
 					initial={{ opacity: 0, translateY: "30px" }}
 					whileInView={{ opacity: 1, translateY: 0 }}
@@ -42,7 +42,9 @@ let works = (): JSX.Element => {
 						))}
 					</div>
 				</section>
-				<div className={`w-96 h-96  pointer-events-none absolute -z-50`}>
+				<div
+					className={`w-96 h-96 -mt-20 right-0 lg:block hidden pointer-events-none absolute -z-50`}
+				>
 					<img src={"/blobs/bloblight.svg"} alt="blob" />
 				</div>
 				<Button
