@@ -22,7 +22,7 @@ let HeaderData: HeaderDataInterface[] = [
    {
       id: 4,
       title: 'Resume',
-      link: 'cv.pdf',
+      link: 'https://drive.google.com/file/d/1g1hFjqVJc__2Ud01DTeMqQc0hb0vHFNF/view?usp=sharing',
       target: '_blank'
    },
 ]
