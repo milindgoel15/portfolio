@@ -10,10 +10,6 @@ let works = (): JSX.Element => {
 			<Head>
 				<title>Recent Works & Contributions</title>
 				<meta name="title" content="Recent Works & Contributions" />
-				<meta
-					name="description"
-					content="Building beautiful web experiences for various businesses with coffee and code."
-				/>
 			</Head>
 
 			<main className="pt-20 text-center">

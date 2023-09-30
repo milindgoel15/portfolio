@@ -15,6 +15,10 @@ let headDetails = (): JSX.Element => {
 					name="keywords"
 					content="Milind Goel, milindgoel15, Web Developer, Flutter Developer"
 				/>
+				<meta
+					name="description"
+					content="Experienced Web and Flutter Developer | Crafting Innovative Digital Solutions | Explore My Portfolio and Skills"
+				/>
 
 				{/* open graph / facebook meta tags */}
 				<meta property="og:type" content="website" />

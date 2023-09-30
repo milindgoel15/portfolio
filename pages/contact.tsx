@@ -9,10 +9,6 @@ let contact = (): JSX.Element => {
 			<Head>
 				<title>Connect with me</title>
 				<meta name="title" content="Connect with me" />
-				<meta
-					name="description"
-					content="Want to hire me or have a little chat? Feel free to contact!"
-				/>
 			</Head>
 			<main className="py-20 text-center ">
 				<motion.h2

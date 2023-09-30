@@ -9,10 +9,6 @@ let skills = (): JSX.Element => {
 			<Head>
 				<title>Skills</title>
 				<meta name="title" content="Skills" />
-				<meta
-					name="description"
-					content="Building beautiful web experiences for various businesses with coffee and code."
-				/>
 			</Head>
 			<main className="pt-20 text-center">
 				<motion.h2

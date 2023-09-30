@@ -8,10 +8,6 @@ let Home = (): JSX.Element => {
 			<Head>
 				<title>Milind Goel</title>
 				<meta name="title" content="Milind Goel" />
-				<meta
-					name="description"
-					content="A Web Developer, based in India building astonishing web experiences."
-				/>
 			</Head>
 
 			<main className="pt-28 relative pb-20 text-center">
