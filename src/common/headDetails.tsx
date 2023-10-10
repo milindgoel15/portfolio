@@ -55,6 +55,12 @@ let headDetails = (): JSX.Element => {
 					content="2tG9JnOT3BhG1wK6wvHuYbfJqzXu1D3aosqBoAMYHIA"
 				/>
 
+				<script
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7694944823531916"
+					crossOrigin="anonymous"
+				></script>
+
 				{/* favicons */}
 				<link
 					rel="icon"
