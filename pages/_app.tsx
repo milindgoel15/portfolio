@@ -2,15 +2,15 @@ import localFont from "next/font/local";
 import type { AppProps } from "next/app";
 import "../styles/globals.scss";
 import { ThemeProvider } from "next-themes";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import HeadDetails from "@/src/common/headDetails";
 import Cloudflare from "@/src/common/Cloudflare";
 import Cursor from "@/src/common/Cursor";
 import Header from "@/src/common/Header";
 import Footer from "@/src/common/Footer";
 import BlobAnimation from "@/src/blobanimation/BlobAnimation";
-// import DesktopContext from "@/src/contexts/DesktopContext";
-// import SnowFlakes from "@/src/common/SnowFlakes";
+import DesktopModeProvider from "@/src/hooks/useDesktopMode";
+import SnowFlakes from "@/src/common/SnowFlakes";
 
 const raisonne = localFont({
 	src: [
@@ -24,21 +24,6 @@ const raisonne = localFont({
 });
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-	let [isDesktopMode, setDesktopMode] = useState(false);
-	let desktop: boolean = typeof window == "object" && window.innerWidth > 1280;
-
-	useEffect(() => {
-		const updateComp = () => {
-			setDesktopMode(desktop);
-		};
-
-		updateComp();
-		window.addEventListener("resize", updateComp);
-		return () => {
-			window.removeEventListener("resize", updateComp);
-		};
-	}, []);
-
 	useEffect(() => {
 		console.log(
 			"%cMade with ❤︎️ by Milind Goel",
@@ -55,17 +40,16 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 				}
 			`}</style>
 			<Cloudflare />
-			<ThemeProvider attribute="class">
-				{/* <DesktopContext.Provider value={{ isDesktopMode }}>
-						<SnowFlakes />
-					</DesktopContext.Provider> */}
-
-				{isDesktopMode && <Cursor />}
-				<Header />
-				<BlobAnimation />
-				<Component {...pageProps} />
-				<Footer />
-			</ThemeProvider>
+			<DesktopModeProvider>
+				<ThemeProvider attribute="class">
+					{/* <SnowFlakes /> */}
+					<Cursor />
+					<Header />
+					<BlobAnimation />
+					<Component {...pageProps} />
+					<Footer />
+				</ThemeProvider>
+			</DesktopModeProvider>
 		</>
 	);
 }
