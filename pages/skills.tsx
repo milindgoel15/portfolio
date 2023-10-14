@@ -1,9 +1,14 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
-import SkillCard from "@/src/partials/SkillCard";
-import SkillsData from "@/src/data/SkillsData";
+import { InferGetStaticPropsType } from "next";
 
-let skills = (): JSX.Element => {
+import SkillCard from "@/src/partials/SkillCard";
+import SKillDataInterface from "@/src/interfaces/SkillDataInterface";
+import SkillDataInterface from "@/src/interfaces/SkillDataInterface";
+
+let skills = ({
+	skillsData,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => {
 	return (
 		<>
 			<Head>
@@ -21,14 +26,14 @@ let skills = (): JSX.Element => {
 					Skills
 				</motion.h2>
 
-				<section className="flex justify-center">
-					<div className="grid relative grid-rows-8 gap-2 sm:grid-cols-2 sm:grid-rows-5 sm:mx-14 sm:mt-12 lg:grid-col-3 lg:grid-rows-3 lg:grid-flow-col lg:gap-5">
-						{SkillsData.map((props) => (
+				<section className="flex mt-12 sm:mt-0 justify-center">
+					<div className=" grid relative grid-rows-8 gap-2 sm:grid-cols-2 sm:grid-rows-5 sm:mx-14 sm:mt-12 lg:grid-col-3 lg:grid-rows-3 lg:grid-flow-col lg:gap-5 ">
+						{skillsData.map((skill: SKillDataInterface) => (
 							<SkillCard
-								key={props.id}
-								title={props.title}
-								language={props.language}
-								id={props.id}
+								key={skill.id}
+								title={skill.title}
+								language={skill.language}
+								id={skill.id}
 							/>
 						))}
 					</div>
@@ -39,3 +44,15 @@ let skills = (): JSX.Element => {
 };
 
 export default skills;
+
+export const getStaticProps = async () => {
+	const res = await fetch(
+		"https://github.com/milindgoel15/portfolio-data/blob/main/skills_data.json?raw=true"
+	);
+	const data = await res.json();
+
+	return {
+		props: { skillsData: data["skillsData"] as SkillDataInterface[] },
+		revalidate: 60,
+	};
+};

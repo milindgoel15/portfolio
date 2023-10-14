@@ -1,10 +1,13 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
-import WorksData from "@/src/data/WorksData";
 import WorkCard from "@/src/partials/WorkCard";
 import Button from "@/src/common/Button";
+import WorksDataInterface from "@/src/interfaces/WorkDataInterface";
+import { InferGetStaticPropsType } from "next";
 
-let works = (): JSX.Element => {
+let works = ({
+	workData,
+}: InferGetStaticPropsType<typeof getStaticProps>): JSX.Element => {
 	return (
 		<>
 			<Head>
@@ -25,16 +28,8 @@ let works = (): JSX.Element => {
 
 				<section className="flex justify-center items-center">
 					<div className="grid relative grid-rows-6 gap-2 sm:mt-12 sm:grid-cols-2 sm:grid-rows-3 sm:gap-4 lg:gap-6 lg:grid-col-2 xl:gap-8 ">
-						{WorksData.map((props) => (
-							<WorkCard
-								key={props.id}
-								title={props.title}
-								desc={props.desc}
-								role={props.role}
-								lang={props.lang}
-								link={props.link}
-								id={props.id}
-							/>
+						{workData.map((data) => (
+							<WorkCard key={data.id} workData={data} />
 						))}
 					</div>
 				</section>
@@ -54,3 +49,17 @@ let works = (): JSX.Element => {
 };
 
 export default works;
+
+export const getStaticProps = async () => {
+	const res = await fetch(
+		"https://github.com/milindgoel15/portfolio-data/blob/main/work_data.json?raw=true"
+	);
+	const data = await res.json();
+
+	return {
+		props: {
+			workData: data["workData"] as WorksDataInterface[],
+		},
+		revalidate: 60,
+	};
+};

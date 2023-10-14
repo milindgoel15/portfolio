@@ -6,7 +6,7 @@ let Footer = (): JSX.Element => {
 					Made with&nbsp;<span className="text-red-600">❤</span>
 					&nbsp;by&nbsp;
 					<a
-						className="text-blue-600 transition-all hover:text-blue-400"
+						className="text-blue-700 dark:text-blue-400 transition-all hover:text-blue-500"
 						href="http://github.com/milindgoel15"
 						target="_blank"
 						rel="noopener noreferrer"
