@@ -8,7 +8,7 @@ import Moon from "../Icons/Moon";
 import Sun from "../Icons/Sun";
 import SystemIcon from "../Icons/System";
 import ThemeButton from "./ThemeButton";
-import Logo from "../Icons/Logo";
+import Logo from "../Icons/branding/Logo";
 
 let Header = () => {
 	let [isNavBarOpen, setNavBarOpen] = useState(false);
