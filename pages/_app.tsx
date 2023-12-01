@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 			<Cloudflare />
 			<DesktopModeProvider>
 				<ThemeProvider attribute="class">
-					{/* <SnowFlakes /> */}
+					<SnowFlakes />
 					<Cursor />
 					<Header />
 					<BlobAnimation />

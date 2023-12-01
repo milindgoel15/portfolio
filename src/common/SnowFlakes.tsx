@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { useDesktopMode } from "../hooks/useDesktopMode";
 
 let SnowFlakes = () => {
-	let isWinter = false;
+	let isWinter = true;
 	let { isDesktopMode } = useDesktopMode();
 
 	return (
