@@ -26,17 +26,15 @@ let skills = ({
 					Skills
 				</motion.h2>
 
-				<section className="flex mt-12 sm:mt-0 justify-center">
-					<div className=" grid relative grid-rows-8 gap-2 sm:grid-cols-2 sm:grid-rows-5 sm:mx-14 sm:mt-12 lg:grid-col-3 lg:grid-rows-3 lg:grid-flow-col lg:gap-5 ">
-						{skillsData.map((skill: SKillDataInterface) => (
-							<SkillCard
-								key={skill.id}
-								title={skill.title}
-								language={skill.language}
-								id={skill.id}
-							/>
-						))}
-					</div>
+				<section className=" grid relative grid-rows-8 gap-2 sm:grid-cols-2 sm:grid-rows-5 sm:mx-14 sm:mt-12 lg:grid-col-3 lg:grid-rows-3 lg:grid-flow-col lg:gap-5 lg:mx-20 xl:mx-32  my-10">
+					{skillsData.map((skill: SKillDataInterface) => (
+						<SkillCard
+							key={skill.id}
+							title={skill.title}
+							language={skill.language}
+							id={skill.id}
+						/>
+					))}
 				</section>
 			</main>
 		</>

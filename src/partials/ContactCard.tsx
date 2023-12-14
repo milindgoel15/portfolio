@@ -18,7 +18,7 @@ let ContactCard = (props: ContactDataInterface) => {
 					delay: props.id * 0.05,
 					ease: "easeIn",
 				}}
-				className="p-8 flex items-center bg-blue-600 hover:bg-blue-700 border-transparent rounded-md shadow-md space-y-2 mt-5 sm:h-40 w-84 sm:ml-0 sm:mt-0 sm:w-80 lg:w-[30rem] text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl foldContactCard"
+				className="p-8 flex items-center bg-blue-600 hover:bg-blue-700 rounded-md shadow-md space-y-2 mt-5 sm:ml-0 sm:mt-0 text-left relative transtion-all duration-300 ease-in-out top-0 hover:-top-1 hover:shadow-xl foldContactCard"
 			>
 				<div className="lg:pl-2.5 pt-1.5 foldContactIcon">
 					{props.image}

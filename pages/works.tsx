@@ -26,12 +26,10 @@ let works = ({
 					Recents Works & Contributions
 				</motion.h2>
 
-				<section className="flex justify-center items-center">
-					<div className="grid relative grid-rows-6 gap-2 sm:mt-12 sm:grid-cols-2 sm:grid-rows-3 sm:gap-4 lg:gap-6 lg:grid-col-2 xl:gap-8 ">
-						{workData.map((data) => (
-							<WorkCard key={data.id} workData={data} />
-						))}
-					</div>
+				<section className="grid sm:grid-cols-2 gap-4 lg:gap-6 xl:gap-8 mx-4 sm:mx-12 lg:mx-20 xl:mx-32 2xl:mx-40 my-10">
+					{workData.map((data) => (
+						<WorkCard key={data.id} workData={data} />
+					))}
 				</section>
 				<div
 					className={`w-96 h-96 -mt-20 right-0 lg:block hidden pointer-events-none absolute -z-50`}
