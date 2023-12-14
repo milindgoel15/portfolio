@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { Fade as Hamburger } from "hamburger-react";
@@ -7,72 +7,30 @@ import NavLinks from "../partials/NavLinks";
 import Moon from "../Icons/Moon";
 import Sun from "../Icons/Sun";
 import SystemIcon from "../Icons/System";
-import ThemeButton from "./ThemeButton";
+import ThemeButton, { AppButton } from "./ThemeButton";
 import Logo from "../Icons/branding/Logo";
+
+import SnowFlakes from "./SnowFlakes";
+import { useSnowMode } from "../hooks/useSnowMode";
+import SnowFlakeIcon from "../Icons/SnowFlake";
 
 let Header = () => {
 	let [isNavBarOpen, setNavBarOpen] = useState(false);
 	let { theme, setTheme } = useTheme();
-	let [mounted, setMounted] = useState(false);
 
-	useEffect(() => {
-		setMounted(true);
-	}, []);
-
-	if (!mounted) return null;
+	const { isWinter, toggleSnow } = useSnowMode();
 
 	return (
 		<>
-			<header className="max-w-7xl mx-auto pl-8 pr-4 sm:px-8 md:mx-8 flex xl:mx-auto h-24 items-center justify-between">
-				<Link
-					href="/"
-					onClick={() => setNavBarOpen(false)}
-					className="z-10 cursor-pointer"
-				>
-					<Logo aria-label="Logo" className="w-8" />
-				</Link>
-
+			<header className=" pl-8 pr-4 sm:px-8 md:mx-8 flex py-8 xl:mx-20 2xl:mx-24 items-center justify-between">
 				<nav className="flex gap-6">
-					<div className="flex justify-center gap-5 items-center">
-						<span className="flex items-center z-10 ">
-							{theme === "system" ? (
-								<ThemeButton
-									theme="light"
-									setTheme={setTheme}
-									buttonLabel="Follows System"
-								>
-									<SystemIcon />
-								</ThemeButton>
-							) : theme === "light" ? (
-								<ThemeButton
-									theme="dark"
-									setTheme={setTheme}
-									buttonLabel="Using Light Theme"
-								>
-									<Sun />
-								</ThemeButton>
-							) : (
-								<ThemeButton
-									theme="system"
-									setTheme={setTheme}
-									buttonLabel="Using Dark Theme"
-								>
-									<Moon />
-								</ThemeButton>
-							)}
-						</span>
-						<span className="md:hidden z-10">
-							<Hamburger
-								toggled={isNavBarOpen}
-								toggle={setNavBarOpen}
-								size={24}
-								rounded
-								label="Show menu"
-								hideOutline
-								duration={0.4}
-							/>
-						</span>
-					</div>
+					<Link
+						href="/"
+						onClick={() => setNavBarOpen(false)}
+						className="z-10 cursor-pointer"
+					>
+						<Logo aria-label="Logo" className="w-8" />
+					</Link>
 
 					<ul
 						onClick={() => setNavBarOpen(false)}
@@ -91,7 +49,53 @@ let Header = () => {
 						))}
 					</ul>
 				</nav>
+
+				<span className="flex items-center gap-4 z-10 ">
+					<AppButton
+						onClick={toggleSnow}
+						title={` ${isWinter ? "Toggle snow off" : "Toggle snow on"} `}
+					>
+						<SnowFlakeIcon className={`${isWinter && "text-blue-500"}`} />
+					</AppButton>
+					{theme === "system" ? (
+						<ThemeButton
+							theme="light"
+							setTheme={setTheme}
+							buttonLabel="Follows System"
+						>
+							<SystemIcon />
+						</ThemeButton>
+					) : theme === "light" ? (
+						<ThemeButton
+							theme="dark"
+							setTheme={setTheme}
+							buttonLabel="Using Light Theme"
+						>
+							<Sun />
+						</ThemeButton>
+					) : (
+						<ThemeButton
+							theme="system"
+							setTheme={setTheme}
+							buttonLabel="Using Dark Theme"
+						>
+							<Moon />
+						</ThemeButton>
+					)}
+					<span className="md:hidden z-10">
+						<Hamburger
+							toggled={isNavBarOpen}
+							toggle={setNavBarOpen}
+							size={24}
+							rounded
+							label="Show menu"
+							hideOutline
+							duration={0.4}
+						/>
+					</span>
+				</span>
 			</header>
+			<SnowFlakes isWinter={isWinter} />
 		</>
 	);
 };

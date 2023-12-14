@@ -1,8 +1,8 @@
 import localFont from "next/font/local";
 import type { AppProps } from "next/app";
 import "../styles/globals.scss";
-import { ThemeProvider } from "next-themes";
 import React, { useEffect } from "react";
+
 import HeadDetails from "@/src/common/headDetails";
 import Cloudflare from "@/src/common/Cloudflare";
 import Cursor from "@/src/common/Cursor";
@@ -11,6 +11,8 @@ import Footer from "@/src/common/Footer";
 import BlobAnimation from "@/src/blobanimation/BlobAnimation";
 import DesktopModeProvider from "@/src/hooks/useDesktopMode";
 import SnowFlakes from "@/src/common/SnowFlakes";
+import { NextThemeProvider } from "@/src/providers/NextThemeProvider";
+import SnowModeProvider from "@/src/hooks/useSnowMode";
 
 const raisonne = localFont({
 	src: [
@@ -41,14 +43,15 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 			`}</style>
 			<Cloudflare />
 			<DesktopModeProvider>
-				<ThemeProvider attribute="class">
-					<SnowFlakes />
-					<Cursor />
-					<Header />
-					<BlobAnimation />
-					<Component {...pageProps} />
-					<Footer />
-				</ThemeProvider>
+				<SnowModeProvider>
+					<NextThemeProvider>
+						<Cursor />
+						<Header />
+						<BlobAnimation />
+						<Component {...pageProps} />
+						<Footer />
+					</NextThemeProvider>
+				</SnowModeProvider>
 			</DesktopModeProvider>
 		</>
 	);

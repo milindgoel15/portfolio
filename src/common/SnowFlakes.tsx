@@ -1,12 +1,10 @@
 import Snowfall from "react-snowfall";
 import dynamic from "next/dynamic";
 
-let SnowFlakes = () => {
-	let isWinter = true;
-
+let SnowFlakes = ({ isWinter }: { isWinter: boolean }) => {
 	return (
 		<>
-			{isWinter && (
+			{isWinter == true && (
 				<Snowfall
 					snowflakeCount={30}
 					style={{

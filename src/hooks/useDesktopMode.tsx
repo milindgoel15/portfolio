@@ -1,5 +1,15 @@
-import { useState, useEffect, ReactNode, useContext } from "react";
-import DesktopContext from "../contexts/DesktopContext";
+import {
+	useState,
+	useEffect,
+	ReactNode,
+	useContext,
+	createContext,
+} from "react";
+import DesktopModeInterface from "../interfaces/DesktopModeInterface";
+
+let DesktopContext = createContext<DesktopModeInterface>({
+	isDesktopMode: false,
+});
 
 let DesktopModeProvider = ({ children }: { children: ReactNode }) => {
 	let [isDesktopMode, setDesktopMode] = useState(() => {
