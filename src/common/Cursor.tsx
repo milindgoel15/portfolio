@@ -11,8 +11,7 @@ const AnimatedCursor = dynamic(
 
 let Cursor = (): JSX.Element => {
 	let { isDesktopMode } = useDesktopMode();
-	let { systemTheme, theme } = useTheme();
-	let currentTheme = theme === "system" ? systemTheme : theme;
+	let { resolvedTheme } = useTheme();
 
 	return (
 		<>
@@ -22,9 +21,9 @@ let Cursor = (): JSX.Element => {
 					outerSize={60}
 					outerAlpha={0.1}
 					color={
-						currentTheme === "dark"
+						resolvedTheme === "dark"
 							? "255,255,255"
-							: currentTheme === "light"
+							: resolvedTheme === "light"
 							? "0,0,0"
 							: "13,115,231"
 					}
