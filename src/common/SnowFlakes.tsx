@@ -1,14 +1,12 @@
 import Snowfall from "react-snowfall";
 import dynamic from "next/dynamic";
-import { useDesktopMode } from "../hooks/useDesktopMode";
 
 let SnowFlakes = () => {
 	let isWinter = true;
-	let { isDesktopMode } = useDesktopMode();
 
 	return (
 		<>
-			{isWinter && isDesktopMode && (
+			{isWinter && (
 				<Snowfall
 					snowflakeCount={30}
 					style={{
