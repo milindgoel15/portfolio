@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Personal portfolio built with Next.js, Typescript & TailwindCSS, hosted on Vercel",
   "repository": {
     "type": "git",
