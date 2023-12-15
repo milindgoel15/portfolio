@@ -1,5 +1,5 @@
 <h3 align="center"> 
-   This is the version 2.5 of my personal portfolio, hosted on Vercel.
+   This is the version 2.6 of my personal portfolio, hosted on Vercel.
 </h3>
 
 <p align="center">Built with ❤ by <a href="https://github.com/milindgoel15">Milind Goel</a>

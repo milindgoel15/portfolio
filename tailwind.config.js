@@ -3,9 +3,24 @@ module.exports = {
 	content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			screens: {
+				fold: "295px",
+				xsm: "584px",
+			},
+			fontSize: {
+				heading: "5.5rem",
+			},
 			colors: {
-				primary: "rgb(20 22 26)",
-				secondary: "rgb(20 22 26 / 0.9)",
+				background: "var(--background)",
+				altBackground: "rgb(27 30 36 / 0.5)",
+
+				surface: "var(--surface)",
+				inverseSurface: "var(--inverseSurface)",
+
+				highlight: "var(--highlight)",
+				inverseHighlight: "var(--inverseHighlight)",
+
+				primary: "var(--primary)",
 			},
 			transitionDuration: {
 				400: "400ms",

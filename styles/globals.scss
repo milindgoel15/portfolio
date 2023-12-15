@@ -4,8 +4,15 @@
 
 :root {
 	--background: #14161a;
-	--accent-color: rgb(13, 115, 231);
+	--surface: #1b1e24;
+	--inverseSurface: rgba(234, 233, 233, 0.607);
+
+	--primary: #3b82f6;
+	--accent-color: #0d73e7;
 	--hover-accent-color: #1361b9;
+
+	--highlight: #07184f;
+	--inverseHighlight: #93c5fd;
 }
 
 @layer base {
@@ -15,7 +22,7 @@
 	}
 
 	body {
-		@apply scroll-smooth bg-white dark:bg-primary;
+		@apply scroll-smooth bg-white dark:bg-background;
 	}
 }
 
@@ -69,5 +76,11 @@ html {
 
 	.foldButton {
 		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	body {
+		cursor: default;
 	}
 }

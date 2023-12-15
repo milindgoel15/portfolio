@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import SkillDataInterface from "../interfaces/SkillDataInterface";
+import SkillDataInterface from "../../interfaces/SkillDataInterface";
 
 let SkillCard = (skill: SkillDataInterface) => {
 	return (

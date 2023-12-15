@@ -10,7 +10,6 @@ import Header from "@/src/common/Header";
 import Footer from "@/src/common/Footer";
 import BlobAnimation from "@/src/blobanimation/BlobAnimation";
 import DesktopModeProvider from "@/src/hooks/useDesktopMode";
-import SnowFlakes from "@/src/common/SnowFlakes";
 import { NextThemeProvider } from "@/src/providers/NextThemeProvider";
 import SnowModeProvider from "@/src/hooks/useSnowMode";
 

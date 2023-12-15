@@ -5,14 +5,17 @@ import {
 	useContext,
 	createContext,
 } from "react";
-import DesktopModeInterface from "../interfaces/DesktopModeInterface";
 
-let DesktopContext = createContext<DesktopModeInterface>({
+export type DesktopModeType = {
+	isDesktopMode: boolean;
+};
+
+const DesktopContext = createContext<DesktopModeType>({
 	isDesktopMode: false,
 });
 
-let DesktopModeProvider = ({ children }: { children: ReactNode }) => {
-	let [isDesktopMode, setDesktopMode] = useState(() => {
+const DesktopModeProvider = ({ children }: { children: ReactNode }) => {
+	const [isDesktopMode, setDesktopMode] = useState(() => {
 		return typeof window === "object" && window.innerWidth > 1280;
 	});
 

@@ -1,16 +1,16 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
 import ContactData from "@/src/data/ContactData";
-import ContactCard from "@/src/partials/ContactCard";
+import ContactCard from "@/src/components/contact/ContactCard";
 
-let contact = (): JSX.Element => {
+const contact = (): JSX.Element => {
 	return (
 		<>
 			<Head>
 				<title>Connect with me</title>
 				<meta name="title" content="Connect with me" />
 			</Head>
-			<main className="py-20 text-center ">
+			<main className="py-20 flex flex-col justify-center items-center text-center ">
 				<motion.h2
 					initial={{ opacity: 0, translateY: "30px" }}
 					whileInView={{ opacity: 1, translateY: 0 }}
@@ -21,20 +21,20 @@ let contact = (): JSX.Element => {
 					Connect with me
 				</motion.h2>
 
-				<section className="flex justify-center items-center">
-					<div className="grid relative grid-rows-6 gap-4 sm:grid-cols-2 sm:grid-rows-3 sm:mt-6 sm:gap-8 lg:grid-col-2 lg:grid-rows-3 lg:grid-flow-col lg:gap-12">
-						{ContactData.map((props) => (
-							<ContactCard
-								key={props.id}
-								image={props.image}
-								link={props.link}
-								social={props.social}
-								username={props.username}
-								id={props.id}
-							/>
-						))}
-					</div>
+				{/* <section className="flex justify-center items-center"> */}
+				<section className="grid relative gap-4 sm:grid-cols-2 sm:gap-8 my-10">
+					{ContactData.map((props) => (
+						<ContactCard
+							key={props.id}
+							image={props.image}
+							link={props.link}
+							social={props.social}
+							username={props.username}
+							id={props.id}
+						/>
+					))}
 				</section>
+				{/* </section> */}
 			</main>
 		</>
 	);
