@@ -17,7 +17,7 @@ const HeaderData: HeaderDataType[] = [
 	},
 	{
 		title: "Resume",
-		link: "https://drive.google.com/file/d/1g1hFjqVJc__2Ud01DTeMqQc0hb0vHFNF/view?usp=sharing",
+		link: "resume",
 		target: "_blank",
 	},
 ];
