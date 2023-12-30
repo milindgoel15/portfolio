@@ -1,6 +1,6 @@
-import Head from "next/head";
 import Hero from "@/src/features/home/hero";
 import SkillsSection from "@/src/features/home/skills";
+import Head from "next/head";
 
 const Home = (): JSX.Element => {
 	return (

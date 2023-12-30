@@ -39,13 +39,13 @@ let SkillsData: SkillDataType[] = [
 		id: 4,
 		icon: <FileCode className="h-8 w-8" />,
 		title: "Development",
-		language: "Next.js, Flutter, Vite",
+		language: "Next.js, Flutter, React.js",
 	},
 	{
 		id: 5,
 		icon: <Database className="h-8 w-8" />,
 		title: "Databases",
-		language: "Realm, MongoDB, Prisma, MySQL",
+		language: "MongoDB, Prisma, Realm, MySQL",
 	},
 	{
 		id: 6,

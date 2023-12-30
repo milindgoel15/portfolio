@@ -1,5 +1,5 @@
-import dynamic from "next/dynamic";
 import { useTheme } from "next-themes";
+import dynamic from "next/dynamic";
 import { useDesktopMode } from "../hooks/useDesktopMode";
 
 const AnimatedCursor = dynamic(
@@ -27,7 +27,7 @@ let Cursor = (): JSX.Element => {
 							? "0,0,0"
 							: "13,115,231"
 					}
-					innerScale={2.5}
+					innerScale={2}
 					outerScale={0.8}
 					trailingSpeed={18}
 					clickables={["a", "button", ".heading"]}

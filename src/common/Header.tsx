@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { useTheme } from "next-themes";
-import Link from "next/link";
 import { Fade as Hamburger } from "hamburger-react";
 import { SnowflakeIcon } from "lucide-react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import { useState } from "react";
 
 import HeaderData from "@/src/data/HeaderData";
 
 import NavLinks from "@/src/components/header/NavLinks";
 import ThemeButton from "@/src/components/header/ThemeButton";
 
+import Logo from "@/src/Icons/branding/Logo";
 import Moon from "@/src/Icons/header/Moon";
 import Sun from "@/src/Icons/header/Sun";
 import SystemIcon from "@/src/Icons/header/System";
-import Logo from "@/src/Icons/branding/Logo";
 
 import SnowFlakes from "@/src/common/SnowFlakes";
 import { useSnowMode } from "@/src/hooks/useSnowMode";
@@ -31,7 +31,7 @@ const Header = () => {
 			<header
 				className={`${
 					pathName == "/" ? "bg-inverseHighlight dark:bg-highlight" : ""
-				} pl-8 pr-4 sm:px-8 flex py-8 xl:px-20 2xl:px-24 items-center justify-between`}
+				} pl-8 pr-4 sm:px-8 flex py-8 xl:px-24 2xl:px-36 items-center justify-between`}
 			>
 				<nav className="flex gap-6">
 					<Link
