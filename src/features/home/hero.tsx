@@ -1,12 +1,13 @@
+import MotionChevronDownIcon from "@/src/Icons/hero/MotionChevronDownIcon";
 import Waves from "@/src/Icons/hero/Waves";
-import MotionButton from "@/src/lib/MotionButton";
+import MotionButton from "@/src/components/buttons/MotionButton";
 // import MotionButton from "@/src/lib/MotionButton";
 import { motion } from "framer-motion";
 
 const Hero = () => {
 	return (
 		<>
-			<main className="bg-inverseHighlight dark:bg-highlight px-4 md:px-8 xl:px-32 2xl:px-56 lg:py-12 gap-5 py-10 flex flex-col justify-center text-center items-center dark:text-white">
+			<main className="bg-inverseHighlight dark:bg-highlight px-4 md:px-8 xl:px-32 2xl:px-52 lg:py-12 gap-5 py-10 flex flex-col justify-center text-center items-center dark:text-white">
 				<motion.h2
 					initial={{ opacity: 0, translateY: "24" }}
 					whileInView={{ opacity: 1, translateY: 0 }}
@@ -31,11 +32,11 @@ const Hero = () => {
 					to make it happen.
 				</motion.p>
 
-				<MotionButton
-					link="/contact"
-					title="LET'S CONNECT"
-					targetValue="_self"
-				/>
+				<MotionButton href="/contact" target="_self">
+					LET'S CONNECT
+				</MotionButton>
+
+				<MotionChevronDownIcon />
 			</main>
 			<Waves />
 		</>

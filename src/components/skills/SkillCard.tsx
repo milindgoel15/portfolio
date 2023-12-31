@@ -1,6 +1,5 @@
-import React from "react";
+import { SkillDataType } from "@/core/data/SkillsData";
 import { motion } from "framer-motion";
-import { SkillDataType } from "@/src/data/SkillsData";
 
 let SkillCard = (skill: SkillDataType) => {
 	return (

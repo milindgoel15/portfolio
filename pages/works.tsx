@@ -1,8 +1,8 @@
-import Head from "next/head";
-import { motion } from "framer-motion";
+import WorksData from "@/core/data/WorksData";
+import MotionButton from "@/src/components/buttons/MotionButton";
 import WorkCard from "@/src/components/work/WorkCard";
-import Button from "@/src/lib/MotionButton";
-import WorksData from "@/src/data/WorksData";
+import { motion } from "framer-motion";
+import Head from "next/head";
 
 const works = (): JSX.Element => {
 	return (
@@ -33,11 +33,12 @@ const works = (): JSX.Element => {
 				>
 					<img src={"/blobs/bloblight.svg"} alt="blob" />
 				</span>
-				<Button
-					link="https://github.com/milindgoel15?tab=repositories"
-					targetValue="_blank"
-					title="Other Contributions"
-				/>
+				<MotionButton
+					href="https://github.com/milindgoel15?tab=repositories"
+					target="_blank"
+				>
+					Other Contributions
+				</MotionButton>
 			</main>
 		</>
 	);

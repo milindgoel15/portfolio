@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
-type AppButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type IconButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 	children: ReactNode;
 };
 
-export const AppButton = ({ children, ...props }: AppButtonProps) => {
+export const IconButton = ({ children, ...props }: IconButtonProps) => {
 	return (
 		<>
 			<button

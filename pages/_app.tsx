@@ -1,17 +1,18 @@
-import localFont from "next/font/local";
 import type { AppProps } from "next/app";
+import localFont from "next/font/local";
+import { useEffect } from "react";
 import "../styles/globals.scss";
-import React, { useEffect } from "react";
 
-import HeadDetails from "@/src/common/headDetails";
+import BlobAnimation from "@/src/blobanimation/BlobAnimation";
 import Cloudflare from "@/src/common/Cloudflare";
 import Cursor from "@/src/common/Cursor";
-import Header from "@/src/common/Header";
 import Footer from "@/src/common/Footer";
-import BlobAnimation from "@/src/blobanimation/BlobAnimation";
+import Header from "@/src/common/Header";
+import HeadDetails from "@/src/common/headDetails";
 import DesktopModeProvider from "@/src/hooks/useDesktopMode";
-import { NextThemeProvider } from "@/src/providers/NextThemeProvider";
 import SnowModeProvider from "@/src/hooks/useSnowMode";
+import { NextThemeProvider } from "@/src/providers/NextThemeProvider";
+import { Toaster } from "react-hot-toast";
 
 const raisonne = localFont({
 	src: [
@@ -49,6 +50,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 						<BlobAnimation />
 						<Component {...pageProps} />
 						<Footer />
+						<Toaster />
 					</NextThemeProvider>
 				</SnowModeProvider>
 			</DesktopModeProvider>

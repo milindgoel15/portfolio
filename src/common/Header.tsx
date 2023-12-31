@@ -4,10 +4,10 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
 
-import HeaderData from "@/src/data/HeaderData";
+import HeaderData from "@/core/data/HeaderData";
 
 import NavLinks from "@/src/components/header/NavLinks";
-import ThemeButton from "@/src/components/header/ThemeButton";
+// import ThemeButton from "@/src/components/header/ThemeButton";
 
 import Logo from "@/src/Icons/branding/Logo";
 import Moon from "@/src/Icons/header/Moon";
@@ -15,8 +15,8 @@ import Sun from "@/src/Icons/header/Sun";
 import SystemIcon from "@/src/Icons/header/System";
 
 import SnowFlakes from "@/src/common/SnowFlakes";
+import { IconButton } from "@/src/components/buttons/IconButton";
 import { useSnowMode } from "@/src/hooks/useSnowMode";
-import { AppButton } from "@/src/lib/AppButton";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -49,42 +49,39 @@ const Header = () => {
 						} `}
 					>
 						{HeaderData.map((navItem, id) => (
-							<NavLinks key={id} navItem={navItem} />
+							<NavLinks key={id} id={id} navItem={navItem} />
 						))}
 					</ul>
 				</nav>
 
 				<span className="flex items-center gap-4 z-10 ">
-					<AppButton
+					<IconButton
 						onClick={toggleSnow}
 						title={` ${isWinter ? "Toggle snow off" : "Toggle snow on"} `}
 					>
 						<SnowflakeIcon className={`${isWinter && "text-blue-500"}`} />
-					</AppButton>
+					</IconButton>
 					{theme === "system" ? (
-						<ThemeButton
-							theme="light"
-							setTheme={setTheme}
-							buttonLabel="Follows System"
+						<IconButton
+							onClick={() => setTheme("light")}
+							title="Follows System"
 						>
 							<SystemIcon />
-						</ThemeButton>
+						</IconButton>
 					) : theme === "light" ? (
-						<ThemeButton
-							theme="dark"
-							setTheme={setTheme}
-							buttonLabel="Using Light Theme"
+						<IconButton
+							onClick={() => setTheme("dark")}
+							title="Using Light Theme"
 						>
 							<Sun />
-						</ThemeButton>
+						</IconButton>
 					) : (
-						<ThemeButton
-							theme="system"
-							setTheme={setTheme}
-							buttonLabel="Using Dark Theme"
+						<IconButton
+							onClick={() => setTheme("system")}
+							title="Using Dark Theme"
 						>
 							<Moon />
-						</ThemeButton>
+						</IconButton>
 					)}
 					<span className="md:hidden z-10">
 						<Hamburger

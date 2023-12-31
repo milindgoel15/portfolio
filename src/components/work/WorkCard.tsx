@@ -1,7 +1,6 @@
-import React from "react";
+import { WorksDataType } from "@/core/data/WorksData";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { WorksDataType } from "@/src/data/WorksData";
 
 const WorkCard = ({ workData }: { workData: WorksDataType }) => {
 	return (

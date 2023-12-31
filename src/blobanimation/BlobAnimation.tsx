@@ -1,5 +1,3 @@
-import React from "react";
-
 const BlobAnimation = () => (
 	<>
 		<div className="lg:block hidden">

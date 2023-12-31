@@ -1,4 +1,4 @@
-import SkillsData from "@/src/data/SkillsData";
+import SkillsData from "@/core/data/SkillsData";
 import { motion } from "framer-motion";
 
 const SkillsSection = () => {
