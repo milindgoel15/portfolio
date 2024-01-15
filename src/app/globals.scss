@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #14161a;
+	--surface: #1b1e24;
+	--inverseSurface: rgba(234, 233, 233, 0.607);
+
+	--primary: #3b82f6;
+	--accent-color: #0d73e7;
+	--hover-accent-color: #1361b9;
+
+	--highlight: #07184f;
+	--inverseHighlight: #93c5fd;
+}
+
+@layer base {
+	html,
+	body {
+		@apply overflow-x-hidden;
+	}
+
+	body {
+		@apply scroll-smooth bg-white dark:bg-background;
+	}
+}
+
+// /* custom scrollbar */
+::-webkit-scrollbar {
+	background-color: #ffffff;
+	width: 16px;
+}
+
+html.dark ::-webkit-scrollbar {
+	background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--accent-color);
+	border-radius: 8px;
+	border: 4px solid transparent;
+	background-clip: content-box;
+
+	&:hover {
+		background: var(--hover-accent-color);
+		border-radius: 8px;
+		border: 4px solid transparent;
+		background-clip: content-box;
+	}
+}
+
+html {
+	scrollbar-width: thin;
+	scrollbar-color: var(--accent-color)
+		var(--background);
+}
+
+/* custom scrollbar */
+
+@media screen and (max-width: 280px) {
+	.foldIndexTitle {
+		font-size: 2rem;
+	}
+
+	.foldSkillCard {
+		padding: 1rem;
+	}
+
+	.foldContactCard {
+		padding: 28px 0 28px 0;
+
+		.foldContactIcon {
+			display: none;
+		}
+	}
+
+	.foldButton {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	html {
+		cursor: auto !important;
+	}
+}
+
+@media (min-width: 1280px) {
+	html {
+		cursor: none !important;
+	}
+}

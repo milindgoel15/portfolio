@@ -1,8 +1,11 @@
 module.exports = {
 	darkMode: "class",
-	content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
+	content: ["./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				raisonne: ["var(--font-raisonne)"],
+			},
 			screens: {
 				fold: "295px",
 				xsm: "584px",
@@ -15,10 +18,12 @@ module.exports = {
 				altBackground: "rgb(27 30 36 / 0.5)",
 
 				surface: "var(--surface)",
-				inverseSurface: "var(--inverseSurface)",
+				inverseSurface:
+					"var(--inverseSurface)",
 
 				highlight: "var(--highlight)",
-				inverseHighlight: "var(--inverseHighlight)",
+				inverseHighlight:
+					"var(--inverseHighlight)",
 
 				primary: "var(--primary)",
 			},
