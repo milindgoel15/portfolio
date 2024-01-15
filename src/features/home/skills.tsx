@@ -6,7 +6,7 @@ const SkillsSection = () => {
 		<>
 			<section className="flex flex-col items-center justify-center">
 				<h3 className="text-4xl font-medium py-8">Skills</h3>
-				<section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-8">
+				<section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-4 lg:mx-8">
 					{SkillsData.map((skills, id) => (
 						<motion.div
 							key={id}

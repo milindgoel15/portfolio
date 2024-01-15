@@ -7,7 +7,7 @@ const BlobAnimation = () => (
 				<img src={"/blobs/bloblight.svg"} alt="blob" />
 			</div>
 			<div
-				className={`w-96 h-96 md:ml-128 lg:ml-162 xl:ml-180 mt-20 pointer-events-none absolute z-50`}
+				className={`w-96 h-96 md:ml-128 lg:ml-162 xl:ml-180 mt-20 pointer-events-none absolute z-40`}
 			>
 				<img src={"/blobs/bloblight.svg"} alt="blob" />
 			</div>

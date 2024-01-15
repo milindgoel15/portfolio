@@ -7,10 +7,11 @@ import BlobAnimation from "@/src/blobanimation/BlobAnimation";
 import Cloudflare from "@/src/common/Cloudflare";
 import Cursor from "@/src/common/Cursor";
 import Footer from "@/src/common/Footer";
-import Header from "@/src/common/Header";
 import HeadDetails from "@/src/common/headDetails";
+import MotionTransition from "@/src/components/MotionTransition";
 import DesktopModeProvider from "@/src/hooks/useDesktopMode";
 import SnowModeProvider from "@/src/hooks/useSnowMode";
+import MotionProvider from "@/src/providers/MotionProvider";
 import { NextThemeProvider } from "@/src/providers/NextThemeProvider";
 import { Toaster } from "react-hot-toast";
 
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
 	return (
 		<>
+
 			<HeadDetails />
 			<style jsx global>{`
 				html {
@@ -42,18 +44,22 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 				}
 			`}</style>
 			<Cloudflare />
-			<DesktopModeProvider>
-				<SnowModeProvider>
-					<NextThemeProvider>
-						<Cursor />
-						<Header />
-						<BlobAnimation />
-						<Component {...pageProps} />
-						<Footer />
-						<Toaster />
-					</NextThemeProvider>
-				</SnowModeProvider>
-			</DesktopModeProvider>
+			<MotionProvider>
+				<MotionTransition />
+				<DesktopModeProvider>
+					<SnowModeProvider>
+						<NextThemeProvider>
+							<Cursor />
+
+							<BlobAnimation />
+							<Component {...pageProps} />
+
+							<Footer />
+							<Toaster />
+						</NextThemeProvider>
+					</SnowModeProvider>
+				</DesktopModeProvider>
+			</MotionProvider>
 		</>
 	);
 }

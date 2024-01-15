@@ -68,7 +68,7 @@ const ContactForm = () => {
 
 	return (
 		<>
-			<section className="flex flex-col items-start bg-inverseHighlight dark:bg-highlight rounded-xl py-8 px-4 fold:px-8 lg:px-12 z-50">
+			<section className="flex flex-col items-start bg-inverseHighlight dark:bg-highlight rounded-xl py-8 px-4 fold:px-8 lg:px-12 z-20">
 				<form
 					onSubmit={handleSubmit((data) => handleContactFormSubmit(data))}
 					className="flex flex-col w-full gap-4 py-4"
@@ -78,9 +78,8 @@ const ContactForm = () => {
 							inputId="firstName"
 							inputType="text"
 							label="First Name*"
-							inputStyle={`${
-								formState.errors?.firstName && "border-red-400"
-							} flex-1`}
+							inputStyle={`${formState.errors?.firstName && "border-red-400"
+								} flex-1`}
 							placeholder="John"
 							{...register("firstName", {
 								value: values.firstName,
@@ -92,7 +91,7 @@ const ContactForm = () => {
 							})}
 						>
 							{formState.errors?.firstName &&
-							formState.errors.firstName.message
+								formState.errors.firstName.message
 								? formState.errors.firstName.message
 								: ""}
 						</FormInput>
@@ -101,9 +100,8 @@ const ContactForm = () => {
 							inputId="lastName"
 							inputType="text"
 							label="last Name"
-							inputStyle={`${
-								formState.errors?.lastName && "border-red-400"
-							} flex-1`}
+							inputStyle={`${formState.errors?.lastName && "border-red-400"
+								} flex-1`}
 							placeholder="Doe"
 							{...register("lastName", {
 								value: values.lastName,
@@ -114,7 +112,7 @@ const ContactForm = () => {
 							})}
 						>
 							{formState.errors?.lastName &&
-							formState.errors.lastName.message
+								formState.errors.lastName.message
 								? formState.errors.lastName.message
 								: ""}
 						</FormInput>
@@ -123,9 +121,8 @@ const ContactForm = () => {
 						inputId="email"
 						inputType="email"
 						label="Email*"
-						inputStyle={`${
-							formState.errors?.email && "border-red-400"
-						} flex-1`}
+						inputStyle={`${formState.errors?.email && "border-red-400"
+							} flex-1`}
 						placeholder="johndoe@gmail.com"
 						{...register("email", {
 							value: values.email,
@@ -144,9 +141,8 @@ const ContactForm = () => {
 					<FormTextArea
 						inputId="message"
 						label="Message*"
-						inputStyle={`${
-							formState.errors?.message && "border-red-400"
-						} flex-1`}
+						inputStyle={`${formState.errors?.message && "border-red-400"
+							} flex-1`}
 						placeholder="Enter your message"
 						{...register("message", {
 							value: values.message,
@@ -164,11 +160,10 @@ const ContactForm = () => {
 					<button
 						disabled={isDisabled}
 						type="submit"
-						className={`${
-							isDisabled
+						className={`${isDisabled
 								? "bg-gray-600 cursor-not-allowed text-white"
 								: "outline-0 hover:outline hover:outline-2 text-white dark:text-black bg-blue-800 outline-slate-400 dark:bg-blue-300  dark:outline-slate-500"
-						}  rounded-lg py-3 text-lg`}
+							}  rounded-lg py-3 text-lg`}
 					>
 						{isDisabled ? "Sending..." : "Send Message"}
 					</button>

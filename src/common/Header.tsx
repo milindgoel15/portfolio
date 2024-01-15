@@ -29,9 +29,8 @@ const Header = () => {
 	return (
 		<>
 			<header
-				className={`${
-					pathName == "/" ? "bg-inverseHighlight dark:bg-highlight" : ""
-				} pl-8 pr-4 sm:px-8 flex py-8 xl:px-24 2xl:px-36 items-center justify-between`}
+				className={`${pathName == "/" ? "" : ""
+					} pl-5 pr-2 sm:px-8 flex py-8 xl:px-24 2xl:px-36 items-center justify-between`}
 			>
 				<nav className="flex gap-6">
 					<Link
@@ -44,9 +43,8 @@ const Header = () => {
 
 					<ul
 						onClick={() => setNavBarOpen(false)}
-						className={`md:flex md:items-center z-[1]  text-center md:z-auto md:static absolute w-full left-0 md:w-auto dark:bg-altBackground md:dark:bg-transparent backdrop-blur md:backdrop-blur-none md:py-0 space-x-4 transition-all ease-in duration-400 ${
-							isNavBarOpen ? "top-[95px]" : "top-[-400px]"
-						} `}
+						className={`md:flex md:items-center z-[1]  text-center md:z-auto md:static absolute w-full left-0 md:w-auto dark:bg-altBackground md:dark:bg-transparent backdrop-blur md:backdrop-blur-none md:py-0 space-x-4 transition-all ease-in duration-400 ${isNavBarOpen ? "top-[95px]" : "top-[-400px]"
+							} `}
 					>
 						{HeaderData.map((navItem, id) => (
 							<NavLinks key={id} id={id} navItem={navItem} />

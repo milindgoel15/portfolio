@@ -1,4 +1,5 @@
 import WorksData from "@/core/data/WorksData";
+import Header from "@/src/common/Header";
 import MotionButton from "@/src/components/buttons/MotionButton";
 import WorkCard from "@/src/components/work/WorkCard";
 import { motion } from "framer-motion";
@@ -11,14 +12,14 @@ const works = (): JSX.Element => {
 				<title>Recent Works & Contributions</title>
 				<meta name="title" content="Recent Works & Contributions" />
 			</Head>
-
-			<main className="pt-20 flex flex-col justify-center items-center text-center">
+			<Header />
+			<main className="py-8 flex flex-col justify-center items-center text-center">
 				<motion.h2
 					initial={{ opacity: 0, translateY: "30px" }}
 					whileInView={{ opacity: 1, translateY: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
-					className="font-extrabold text-2xl py-5 xl:mx-80 2xl:mx-110 text-black dark:text-white md:text-4xl heading"
+					className="font-extrabold text-2xl py-5 text-black dark:text-white md:text-4xl heading"
 				>
 					Recents Works & Contributions
 				</motion.h2>

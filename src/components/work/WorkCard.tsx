@@ -14,10 +14,9 @@ const WorkCard = ({ workData }: { workData: WorksDataType }) => {
 				viewport={{ once: true }}
 				transition={{
 					duration: 0.3,
-					delay: workData.id * 0.05,
-					ease: "easeIn",
+					delay: workData.id * 0.1,
 				}}
-				className="py-10 sm:py-8 px-6 sm:px-10 md:px-8 min-h-full flex flex-col gap-4 bg-inverseSurface text-black dark:bg-altBackground dark:text-white hover:bg-blue-200 dark:hover:bg-blue-800 rounded-md shadow-md sm:mt-0 text-left transtion-all duration-300 ease-in-out top-0 relative hover:-top-1 hover:shadow-xl group foldWorkCard"
+				className="py-10 sm:py-8 px-6 sm:px-10 md:px-8 min-h-full flex flex-col gap-4 bg-inverseSurface text-black dark:bg-altBackground dark:text-white hover:bg-blue-200 dark:hover:bg-blue-800 rounded-md shadow-md text-left transition-all duration-400 hover:shadow-xl group foldWorkCard"
 			>
 				{workData.icon}
 				<span className="flex justify-between items-center mt-5">
