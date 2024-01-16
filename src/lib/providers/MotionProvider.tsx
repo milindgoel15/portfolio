@@ -1,24 +1,24 @@
-// "use client";
+"use client";
 
-// import { AnimatePresence } from "framer-motion";
-// import { usePathname } from "next/navigation";
-// // import { useRouter } from "next/router";
-// import { PropsWithChildren } from "react";
+import { AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
+// import { useRouter } from "next/router";
+import { PropsWithChildren } from "react";
 
-// const MotionProvider = ({ children }: PropsWithChildren) => {
-//    // const router = useRouter();
-//    const pathname = usePathname();
+const MotionProvider = ({ children }: PropsWithChildren) => {
+   // const router = useRouter();
+   const pathname = usePathname();
 
-//    return (
-//       <>
-//          <AnimatePresence mode="wait">
-//             <div key={pathname}>
+   return (
+      <>
+         <AnimatePresence mode="wait">
+            <div key={pathname}>
 
-//                {children}
-//             </div>
-//          </AnimatePresence>
-//       </>
-//    );
-// };
+               {children}
+            </div>
+         </AnimatePresence>
+      </>
+   );
+};
 
-// export default MotionProvider;
+export default MotionProvider;

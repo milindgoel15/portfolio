@@ -33,7 +33,7 @@ const Cursor = () => {
 							? "255,255,255"
 							: resolvedTheme === "light"
 								? "0,0,0"
-								: "13,115,231"
+								: "255,255,255"
 					}
 					innerScale={2}
 					outerScale={0.8}

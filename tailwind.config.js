@@ -7,7 +7,7 @@ module.exports = {
 				raisonne: ["var(--font-raisonne)"],
 			},
 			screens: {
-				fold: "295px",
+				fold: "290px",
 				xsm: "584px",
 			},
 			fontSize: {

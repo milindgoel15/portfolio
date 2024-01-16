@@ -2,12 +2,14 @@ import {
 	githubUrl,
 	instagramUrl,
 	mailLink,
+	spotifyUrl,
 	telegramUrl,
 	youtubeUrl,
 } from "@/core/constants";
 import { GithubIcon, InstagramIcon, Mail, YoutubeIcon } from "lucide-react";
 import Link from "next/link";
 import MGLogoFooter from "../Icons/branding/MGLogoFooter";
+import SpotifyIcon from "../Icons/social/Spotify";
 import Telegram from "../Icons/social/Telegram";
 
 const Footer = () => {
@@ -28,7 +30,8 @@ const Footer = () => {
 				<p className="order-3 sm:order-2">
 					Made with&nbsp;<span className="text-blue-500">❤</span> in India
 				</p>
-				<span className="flex gap-4 order-1 sm:order-3">
+				<span className="flex flex-wrap justify-center items-center gap-5 lg:gap-4 order-1 sm:order-3">
+
 					<Link href={githubUrl} target="_blank">
 						<GithubIcon className="transition-all hover:text-blue-500" />
 					</Link>
@@ -36,13 +39,16 @@ const Footer = () => {
 						<Telegram className="h-6 w-6 fill-black dark:fill-white transition-all hover:fill-blue-500 dark:hover:fill-blue-500" />
 					</Link>
 					<Link href={mailLink} target="_blank">
-						<Mail className="transition-all hover:text-blue-500" />{" "}
+						<Mail className="transition-all hover:text-blue-500" />
+					</Link>
+					<Link href={spotifyUrl} target="_blank">
+						<SpotifyIcon className="h-6 w-6 fill-black dark:fill-white transition-all hover:fill-blue-500 dark:hover:fill-blue-500" />
 					</Link>
 					<Link href={youtubeUrl} target="_blank">
-						<YoutubeIcon className="transition-all hover:text-blue-500" />{" "}
+						<YoutubeIcon className="transition-all hover:text-blue-500" />
 					</Link>
 					<Link href={instagramUrl} target="_blank">
-						<InstagramIcon className="transition-all hover:text-blue-500" />{" "}
+						<InstagramIcon className="transition-all hover:text-blue-500" />
 					</Link>
 				</span>
 			</footer>

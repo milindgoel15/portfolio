@@ -29,7 +29,7 @@ const Header = () => {
 		<>
 			<header
 				className={`${pathName == "/" ? "" : ""
-					} pl-5 pr-2 sm:px-8 flex py-8 xl:px-24 2xl:px-36 items-center justify-between`}
+					} pl-5 pr-2 sm:px-8 flex py-3 sm:py-8 xl:px-24 2xl:px-36 items-center justify-between`}
 			>
 				<nav className="flex gap-6">
 					<Link

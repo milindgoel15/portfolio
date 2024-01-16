@@ -25,7 +25,7 @@ const Hero = () => {
 						whileInView={{ opacity: 1, translateY: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
-						className="font-light foldIndexTitle w-11/12 tracking-wider"
+						className="font-light fold:text-lg lg:w-11/12 lg:tracking-wider"
 					>
 						Hi! I&apos;m Milind Goel, a Web & Flutter developer, based in
 						India. My primary focus is on crafting seamless and visually
