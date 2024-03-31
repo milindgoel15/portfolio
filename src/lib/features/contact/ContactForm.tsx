@@ -1,6 +1,5 @@
 "use client";
 
-
 import FormInput from "@/lib/components/contact/FormInput";
 import FormTextArea from "@/lib/components/contact/FormTextArea";
 import { getErrorMessage } from "@/lib/utils/error_handler";
@@ -14,24 +13,19 @@ import toast from "react-hot-toast";
 const ContactForm = () => {
 	const [isDisabled, setDisabled] = useState(false);
 
-	const { handleSubmit, register, reset, getValues, setValue, formState } =
-		useForm({
-			defaultValues: initialFormState,
-			resolver: zodResolver(ContactFormSchema),
-			mode: "onChange",
-			reValidateMode: "onChange",
-		});
+	const { handleSubmit, register, reset, formState } = useForm({
+		defaultValues: initialFormState,
+		resolver: zodResolver(ContactFormSchema),
+		mode: "onChange",
+		reValidateMode: "onChange",
+	});
 
-	const values = getValues();
-
-	const handleContactFormSubmit: SubmitHandler<ContactFormType> = async (
-		data
-	) => {
+	const handleContactFormSubmit: SubmitHandler<ContactFormType> = async (data) => {
 		const result = ContactFormSchema.safeParse(data);
+		console.log(result);
+
 		if (!result.success) {
-			toast.error(
-				"Data appears to be invalid! Please cross-check your input fields."
-			);
+			toast.error("Data appears to be invalid! Please cross-check your input fields.");
 			return;
 		}
 
@@ -43,11 +37,11 @@ const ContactForm = () => {
 				toast.error(data);
 				return;
 			}
-			if (data.status == 201) {
-				toast.success(data.body);
+			if (data.status != 201) {
+				toast.error(data.body);
 				return;
 			}
-			toast.error(data.body);
+			toast.success(data.body);
 			return;
 		} catch (error) {
 			setDisabled(false);
@@ -77,20 +71,11 @@ const ContactForm = () => {
 							inputId="firstName"
 							inputType="text"
 							label="First Name*"
-							inputStyle={`${formState.errors?.firstName && "border-red-400"
-								} flex-1`}
+							inputStyle={`${formState.errors?.firstName && "border-red-400"} flex-1`}
 							placeholder="John"
-							{...register("firstName", {
-								value: values.firstName,
-								required: true,
-								onChange(event) {
-									event.preventDefault();
-									setValue("firstName", event.target.value);
-								},
-							})}
+							{...register("firstName")}
 						>
-							{formState.errors?.firstName &&
-								formState.errors.firstName.message
+							{formState.errors?.firstName && formState.errors.firstName.message
 								? formState.errors.firstName.message
 								: ""}
 						</FormInput>
@@ -99,19 +84,11 @@ const ContactForm = () => {
 							inputId="lastName"
 							inputType="text"
 							label="last Name"
-							inputStyle={`${formState.errors?.lastName && "border-red-400"
-								} flex-1`}
+							inputStyle={`${formState.errors?.lastName && "border-red-400"} flex-1`}
 							placeholder="Doe"
-							{...register("lastName", {
-								value: values.lastName,
-								onChange(event) {
-									event.preventDefault();
-									setValue("lastName", event.target.value);
-								},
-							})}
+							{...register("lastName")}
 						>
-							{formState.errors?.lastName &&
-								formState.errors.lastName.message
+							{formState.errors?.lastName && formState.errors.lastName.message
 								? formState.errors.lastName.message
 								: ""}
 						</FormInput>
@@ -120,17 +97,9 @@ const ContactForm = () => {
 						inputId="email"
 						inputType="email"
 						label="Email*"
-						inputStyle={`${formState.errors?.email && "border-red-400"
-							} flex-1`}
+						inputStyle={`${formState.errors?.email && "border-red-400"} flex-1`}
 						placeholder="johndoe@gmail.com"
-						{...register("email", {
-							value: values.email,
-							required: true,
-							onChange(event) {
-								event.preventDefault();
-								setValue("email", event.target.value);
-							},
-						})}
+						{...register("email")}
 					>
 						{formState.errors?.email && formState.errors.email.message
 							? formState.errors.email.message
@@ -140,17 +109,9 @@ const ContactForm = () => {
 					<FormTextArea
 						inputId="message"
 						label="Message*"
-						inputStyle={`${formState.errors?.message && "border-red-400"
-							} flex-1`}
+						inputStyle={`${formState.errors?.message && "border-red-400"} flex-1`}
 						placeholder="Enter your message"
-						{...register("message", {
-							value: values.message,
-							required: true,
-							onChange(event) {
-								event.preventDefault();
-								setValue("message", event.target.value);
-							},
-						})}
+						{...register("message")}
 					>
 						{formState.errors?.message && formState.errors.message.message
 							? formState.errors.message.message
@@ -159,17 +120,16 @@ const ContactForm = () => {
 					<button
 						disabled={isDisabled}
 						type="submit"
-						className={`${isDisabled
-							? "bg-gray-600 cursor-not-allowed text-white"
-							: "outline-0 hover:outline hover:outline-2 text-white dark:text-black bg-blue-800 outline-slate-400 dark:bg-blue-300  dark:outline-slate-500"
-							}  rounded-lg py-3 text-lg`}
+						className={`${
+							isDisabled
+								? "bg-gray-600 cursor-not-allowed text-white"
+								: "outline-0 hover:outline hover:outline-2 text-white dark:text-black bg-blue-800 outline-slate-400 dark:bg-blue-300  dark:outline-slate-500"
+						}  rounded-lg py-3 text-lg`}
 					>
 						{isDisabled ? "Sending..." : "Send Message"}
 					</button>
 				</form>
-				<p className="italic text-sm">
-					*Fill in the required information above
-				</p>
+				<p className="italic text-sm">*Fill in the required information above</p>
 			</section>
 		</>
 	);

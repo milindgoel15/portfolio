@@ -1,7 +1,4 @@
-import {
-	mailHost,
-	mailPort,
-} from "@/core/constants";
+import { mailHost, mailPort } from "@/core/constants";
 
 import nodemailer from "nodemailer";
 import { ContactFormType } from "./formType";
@@ -24,20 +21,12 @@ export const sendMail = async (
 	const htmlData = `
     <html>
       <body>
+		  <p>A mail has been received from your website contact form. Check below:</p>
         <h2>New Form Submission</h2>
-        <p><strong>First Name:</strong> ${
-				formData.firstName
-			}</p>
-        <p><strong>Last Name:</strong> ${
-				formData.lastName ?? "Not given"
-			}</p>
-        <p><strong>Email:</strong> ${
-				formData.email
-			}</p>
-        <p><strong>Message:</strong> ${
-				formData.message
-			}</p>
-        
+        <p><strong>First Name:</strong> ${formData.firstName}</p>
+        <p><strong>Last Name:</strong> ${formData.lastName ?? "Not given"}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Message:</strong> ${formData.message}</p>
       </body>
     </html>
   `;
@@ -52,7 +41,6 @@ export const sendMail = async (
 		from: mailUser,
 		to: mailUser,
 		subject: `Mail from ${formData.firstName}`,
-		text: `A mail has been received from your website contact form. Check below:\n`,
 		html: htmlData,
 	});
 
