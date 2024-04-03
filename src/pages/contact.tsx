@@ -15,7 +15,6 @@ const contact = () => {
 				<section className="grid gap-4 md:grid-cols-2 justify-center items-center sm:gap-8  mx-4 sm:mx-8 xl:mx-16 2xl:mx-36">
 					<ContactHero />
 					<ContactForm />
-
 				</section>
 			</main>
 		</>

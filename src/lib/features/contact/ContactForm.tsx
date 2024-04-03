@@ -1,17 +1,23 @@
 "use client";
 
-import FormInput from "@/lib/components/contact/FormInput";
-import FormTextArea from "@/lib/components/contact/FormTextArea";
-import { getErrorMessage } from "@/lib/utils/error_handler";
-import { ContactFormSchema, ContactFormType, initialFormState } from "@/lib/utils/formType";
-import { processForm } from "@/lib/utils/mail_handler";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useState } from "react";
+import { LegacyRef, useEffect, useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
+import FormInput from "@/lib/components/contact/FormInput";
+import FormTextArea from "@/lib/components/contact/FormTextArea";
+import { recaptchaSiteKey } from "@/lib/utils";
+import { verifyCaptchaToken } from "@/lib/utils/captcha_handler";
+import { getErrorMessage } from "@/lib/utils/error_handler";
+import { ContactFormSchema, ContactFormType, initialFormState } from "@/lib/utils/formType";
+import { processForm } from "@/lib/utils/mail_handler";
+
 const ContactForm = () => {
 	const [isDisabled, setDisabled] = useState(false);
+
+	const captchaRef = useRef<LegacyRef<ReCAPTCHA> | null>(null);
 
 	const { handleSubmit, register, reset, formState } = useForm({
 		defaultValues: initialFormState,
@@ -22,13 +28,31 @@ const ContactForm = () => {
 
 	const handleContactFormSubmit: SubmitHandler<ContactFormType> = async (data) => {
 		const result = ContactFormSchema.safeParse(data);
-		console.log(result);
 
 		if (!result.success) {
 			toast.error("Data appears to be invalid! Please cross-check your input fields.");
 			return;
 		}
+		if (!captchaRef || !captchaRef.current || typeof captchaRef.current == "string") {
+			toast.error("Failed to generate google recaptcha!");
+			return;
+		}
 
+		const token = await captchaRef.current.getValue();
+
+		if (token === "") {
+			toast.error("Please verify that you are not a robot!");
+			return;
+		}
+
+		const isValidToken = await verifyCaptchaToken(token);
+
+		if (isValidToken.status !== 200) {
+			toast.error(
+				"Sorry, we were unable to process your form submission. Our systems have detected automated activity, and we require human interaction to complete this action. Please try again or contact support for further assistance."
+			);
+			return;
+		}
 		try {
 			setDisabled(true);
 			const data = await processForm(result.data);
@@ -56,6 +80,9 @@ const ContactForm = () => {
 	useEffect(() => {
 		if (formState.isSubmitSuccessful) {
 			reset(initialFormState);
+			if (captchaRef != null && captchaRef.current !== null) {
+				captchaRef.current.reset();
+			}
 		}
 	}, [formState, reset]);
 
@@ -105,7 +132,6 @@ const ContactForm = () => {
 							? formState.errors.email.message
 							: ""}
 					</FormInput>
-
 					<FormTextArea
 						inputId="message"
 						label="Message*"
@@ -117,6 +143,12 @@ const ContactForm = () => {
 							? formState.errors.message.message
 							: ""}
 					</FormTextArea>
+					<ReCAPTCHA
+						sitekey={recaptchaSiteKey}
+						size="normal"
+						ref={captchaRef}
+						className="w-fit"
+					/>
 					<button
 						disabled={isDisabled}
 						type="submit"

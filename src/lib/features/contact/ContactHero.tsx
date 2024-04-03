@@ -5,7 +5,7 @@ import Link from "next/link";
 const ContactHero = () => {
 	return (
 		<>
-			<section className="flex flex-col gap-8 items-start text-left">
+			<section className="flex flex-col gap-8 items-start text-left px-5">
 				<AppMotionH3
 					initial={{ opacity: 0, translateY: "20px" }}
 					whileInView={{ opacity: 1, translateY: 0 }}
@@ -22,9 +22,9 @@ const ContactHero = () => {
 					transition={{ duration: 0.5 }}
 					className="text-lg font-light lg:w-11/12"
 				>
-					Thanks for stopping by! If you have any questions, suggestions,
-					or just want to chat, feel free to reach out using the details
-					below or use the quick contact form for a direct message.
+					Thanks for stopping by! If you have any questions, suggestions, or just want to chat,
+					feel free to reach out using the details below or use the quick contact form for a
+					direct message.
 				</AppMotionP>
 				<ul className=" grid lg:grid-cols-2 gap-6">
 					{ContactData.map((props, id) => (
@@ -36,8 +36,7 @@ const ContactHero = () => {
 							className="flex gap-2"
 							key={id}
 						>
-							{props.image}{" "}
-							<Link href={props.link}> {props.username} </Link>
+							{props.image} <Link href={props.link}> {props.username} </Link>
 						</AppMotionLi>
 					))}
 				</ul>

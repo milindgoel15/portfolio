@@ -31,7 +31,6 @@ const Footer = () => {
 					Made with&nbsp;<span className="text-blue-500">❤</span> in India
 				</p>
 				<span className="flex flex-wrap justify-center items-center gap-5 lg:gap-4 order-1 sm:order-3">
-
 					<Link href={githubUrl} target="_blank">
 						<GithubIcon className="transition-all hover:text-blue-500" />
 					</Link>
