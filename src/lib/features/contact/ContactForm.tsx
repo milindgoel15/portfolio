@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { LegacyRef, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -17,7 +17,7 @@ import { processForm } from "@/lib/utils/mail_handler";
 const ContactForm = () => {
 	const [isDisabled, setDisabled] = useState(false);
 
-	const captchaRef = useRef<LegacyRef<ReCAPTCHA> | null>(null);
+	const captchaRef = useRef<ReCAPTCHA>(null);
 
 	const { handleSubmit, register, reset, formState } = useForm({
 		defaultValues: initialFormState,
@@ -25,6 +25,8 @@ const ContactForm = () => {
 		mode: "onChange",
 		reValidateMode: "onChange",
 	});
+	const [isVerified, setVerified] = useState(false);
+	const [isSubmitted, setSubmitted] = useState(false);
 
 	const handleContactFormSubmit: SubmitHandler<ContactFormType> = async (data) => {
 		const result = ContactFormSchema.safeParse(data);
@@ -37,10 +39,9 @@ const ContactForm = () => {
 			toast.error("Failed to generate google recaptcha!");
 			return;
 		}
+		const token = captchaRef.current.getValue();
 
-		const token = await captchaRef.current.getValue();
-
-		if (token === "") {
+		if (token === null || token === "") {
 			toast.error("Please verify that you are not a robot!");
 			return;
 		}
@@ -54,6 +55,7 @@ const ContactForm = () => {
 			return;
 		}
 		try {
+			setVerified(true);
 			setDisabled(true);
 			const data = await processForm(result.data);
 
@@ -65,6 +67,7 @@ const ContactForm = () => {
 				toast.error(data.body);
 				return;
 			}
+			setSubmitted(true);
 			toast.success(data.body);
 			return;
 		} catch (error) {
@@ -78,13 +81,13 @@ const ContactForm = () => {
 	};
 
 	useEffect(() => {
-		if (formState.isSubmitSuccessful) {
+		if (formState.isSubmitSuccessful && isVerified && isSubmitted) {
 			reset(initialFormState);
 			if (captchaRef != null && captchaRef.current !== null) {
 				captchaRef.current.reset();
 			}
 		}
-	}, [formState, reset]);
+	}, [formState, reset, isVerified, isSubmitted]);
 
 	return (
 		<>
@@ -143,12 +146,7 @@ const ContactForm = () => {
 							? formState.errors.message.message
 							: ""}
 					</FormTextArea>
-					<ReCAPTCHA
-						sitekey={recaptchaSiteKey}
-						size="normal"
-						ref={captchaRef}
-						className="w-fit"
-					/>
+					<ReCAPTCHA sitekey={recaptchaSiteKey} size="normal" ref={captchaRef} />
 					<button
 						disabled={isDisabled}
 						type="submit"
