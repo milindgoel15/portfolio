@@ -1,11 +1,7 @@
 "use client";
 
 import { useWindowDimensions } from "@/lib/hooks/useWindowDimensions";
-import {
-	ReactNode,
-	createContext,
-	useContext
-} from "react";
+import { ReactNode, createContext, useContext } from "react";
 
 export type DesktopModeType = {
 	isDesktopMode: boolean;
@@ -38,9 +34,7 @@ const DesktopModeProvider = ({ children }: { children: ReactNode }) => {
 
 	return (
 		<>
-			<DesktopContext.Provider value={{ isDesktopMode }}>
-				{children}
-			</DesktopContext.Provider>
+			<DesktopContext.Provider value={{ isDesktopMode }}>{children}</DesktopContext.Provider>
 		</>
 	);
 };
@@ -50,9 +44,7 @@ export default DesktopModeProvider;
 export const useDesktopMode = () => {
 	const context = useContext(DesktopContext);
 	if (!context) {
-		throw new Error(
-			"useDesktopMode must be used within a DesktopModeProvider"
-		);
+		throw new Error("useDesktopMode must be used within a DesktopModeProvider");
 	}
 	return context;
 };

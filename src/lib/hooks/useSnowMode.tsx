@@ -1,19 +1,20 @@
 "use client";
 
+import { defaultSnowState } from "@/core/constants";
 import { ReactNode, createContext, useContext, useState } from "react";
 
 const SnowModeContext = createContext({
-	isWinter: true,
-	toggleSnow: () => { },
+	isWinter: defaultSnowState,
+	toggleSnow: () => {},
 });
 
 const SnowModeProvider = ({ children }: { children: ReactNode }) => {
 	const isServer = typeof window === "undefined";
 
-	let isWinterMode = true;
+	let isWinterMode = defaultSnowState;
 
 	if (!isServer) {
-		isWinterMode = JSON.parse(localStorage.getItem("isWinter") ?? "true");
+		isWinterMode = JSON.parse(localStorage.getItem("isWinter") ?? `${defaultSnowState}`);
 	}
 
 	const [isWinter, setIsWinter] = useState(isWinterMode);
