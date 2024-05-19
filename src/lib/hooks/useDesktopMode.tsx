@@ -13,7 +13,7 @@ const DesktopContext = createContext<DesktopModeType>({
 
 const DesktopModeProvider = ({ children }: { children: ReactNode }) => {
 	const { windowWidth } = useWindowDimensions();
-	const isDesktopMode = windowWidth > 1280;
+	const isDesktopMode = windowWidth > 1000;
 	// const [isDesktopMode, setDesktopMode] = useState(() => {
 	// 	return typeof window === "object" && window.innerWidth > 1280;
 	// });
