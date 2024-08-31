@@ -9,13 +9,13 @@ const Hero = () => {
 		<>
 			<main className="bg-inverseHighlight dark:bg-highlight">
 				<Header />
-				<section className="px-4 md:px-8 xl:px-32 2xl:px-44 py-8 gap-5 flex flex-col justify-center text-center items-center dark:text-white">
+				<section className="px-4 md:px-8 xl:px-32 2xl:px-52 py-8 gap-5 flex flex-col justify-center text-center items-center dark:text-white">
 					<AppMotionH2
 						initial={{ opacity: 0, translateY: "24" }}
 						whileInView={{ opacity: 1, translateY: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
-						className="text-3xl md:text-5xl lg:text-6xl 2xl:text-7xl font-extrabold"
+						className="text-3xl md:text-5xl lg:text-6xl font-extrabold"
 					>
 						Where Innovation Meets Pixels: Shaping Ideas into Dynamic Digital Realities
 					</AppMotionH2>
@@ -24,7 +24,7 @@ const Hero = () => {
 						whileInView={{ opacity: 1, translateY: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
-						className="font-light fold:text-lg xl:text-xl lg:w-10/12 lg:tracking-wider"
+						className="font-light fold:text-lg lg:w-11/12 lg:tracking-wider"
 					>
 						Hi! I&apos;m Milind Goel, a Web & Flutter developer, based in India. My primary
 						focus is on crafting seamless and visually engaging user experiences. If
