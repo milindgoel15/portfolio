@@ -8,6 +8,7 @@ import Cloudflare from "@/lib/common/Cloudflare";
 import Cursor from "@/lib/common/Cursor";
 import Footer from "@/lib/common/Footer";
 import HeadDetails from "@/lib/common/headDetails";
+import LenisLayout from "@/lib/common/LenisLayout";
 import MotionTransition from "@/lib/components/MotionTransition";
 import DesktopModeProvider from "@/lib/hooks/useDesktopMode";
 import SnowModeProvider from "@/lib/hooks/useSnowMode";
@@ -37,7 +38,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 	return (
 		<>
-
 			<HeadDetails />
 			<style jsx global>{`
 				html {
@@ -45,22 +45,24 @@ function MyApp({ Component, pageProps }: AppProps) {
 				}
 			`}</style>
 			<Cloudflare />
-			<MotionProvider>
-				<NextThemeProvider>
-					<MotionTransition />
-					<DesktopModeProvider>
-						<SnowModeProvider>
-							<Cursor />
+			<LenisLayout>
+				<MotionProvider>
+					<NextThemeProvider>
+						<MotionTransition />
+						<DesktopModeProvider>
+							<SnowModeProvider>
+								<Cursor />
 
-							<BlobAnimation />
-							<Component {...pageProps} />
+								<BlobAnimation />
+								<Component {...pageProps} />
 
-							<Footer />
-							<Toaster />
-						</SnowModeProvider>
-					</DesktopModeProvider>
-				</NextThemeProvider>
-			</MotionProvider>
+								<Footer />
+								<Toaster />
+							</SnowModeProvider>
+						</DesktopModeProvider>
+					</NextThemeProvider>
+				</MotionProvider>
+			</LenisLayout>
 		</>
 	);
 }
