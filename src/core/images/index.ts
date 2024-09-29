@@ -7,11 +7,12 @@ import WeatherWise from "@/core/images/WeatherWise.png";
 
 export { AGA, Genesisos, Portfolio, Todoify, WeatherWise, rdmdzn };
 
-import AGADark from "@/core/images/AGA-dark.png";
-import GenesisosDark from "@/core/images/Genesisos-dark.png";
-import PortfolioDark from "@/core/images/Portfolio-dark.png";
-import rdmdznDark from "@/core/images/rdmdzn-dark.png";
-import TodoifyDark from "@/core/images/Todoify-dark.png";
-import WeatherWiseDark from "@/core/images/WeatherWise-dark.png";
+// dark images
+import AGADark from "@/core/images/AGAdark.png";
+import GenesisosDark from "@/core/images/Genesisosdark.png";
+import PortfolioDark from "@/core/images/Portfoliodark.png";
+import rdmdznDark from "@/core/images/rdmdzndark.png";
+import TodoifyDark from "@/core/images/Todoifydark.png";
+import WeatherWiseDark from "@/core/images/WeatherWisedark.png";
 
 export { AGADark, GenesisosDark, PortfolioDark, TodoifyDark, WeatherWiseDark, rdmdznDark };
