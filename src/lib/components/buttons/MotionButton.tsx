@@ -7,11 +7,7 @@ export type ButtonProps = LinkProps & {
 	children: ReactNode;
 };
 
-const MotionButton = ({
-	target,
-	children,
-	...props
-}: ButtonProps) => {
+const MotionButton = ({ target, children, ...props }: ButtonProps) => {
 	return (
 		<>
 			<AppMotionDiv

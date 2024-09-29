@@ -3,7 +3,7 @@ import ContactForm from "@/lib/features/contact/ContactForm";
 import ContactHero from "@/lib/features/contact/ContactHero";
 import Head from "next/head";
 
-const contact = () => {
+const Contact = () => {
 	return (
 		<>
 			<Head>
@@ -12,7 +12,7 @@ const contact = () => {
 			</Head>
 			<main>
 				<Header />
-				<section className="grid gap-4 md:grid-cols-2 justify-center items-center sm:gap-8  mx-4 sm:mx-8 xl:mx-16 2xl:mx-36">
+				<section className="sm:grid sm:gap-4 sm:grid-cols-2 justify-center items-center md:gap-8 mx-4 sm:mx-8 xl:mx-16 2xl:mx-36">
 					<ContactHero />
 					<ContactForm />
 				</section>
@@ -21,4 +21,4 @@ const contact = () => {
 	);
 };
 
-export default contact;
+export default Contact;

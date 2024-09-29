@@ -52,8 +52,7 @@ html.dark ::-webkit-scrollbar {
 
 html {
 	scrollbar-width: thin;
-	scrollbar-color: var(--accent-color)
-		var(--background);
+	scrollbar-color: var(--accent-color) var(--background);
 }
 
 /* custom scrollbar */

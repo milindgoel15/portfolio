@@ -5,7 +5,7 @@ import Link from "next/link";
 const ContactHero = () => {
 	return (
 		<>
-			<section className="flex flex-col gap-8 items-start text-left px-5">
+			<section className="flex flex-col gap-8 items-start text-left sm:px-5 py-5">
 				<AppMotionH3
 					initial={{ opacity: 0, translateY: "20px" }}
 					whileInView={{ opacity: 1, translateY: 0 }}
