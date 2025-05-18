@@ -16,4 +16,4 @@ export const mailHost = "smtp.gmail.com";
 
 export const mailPort = 465;
 
-export const defaultSnowState = true;
+export const defaultSnowState = false;
