@@ -37,7 +37,7 @@ const Footer = () => {
 					<Link href={telegramUrl} target="_blank">
 						<Telegram className="h-6 w-6 fill-black dark:fill-white transition-all hover:fill-blue-500 dark:hover:fill-blue-500" />
 					</Link>
-					<Link href={mailLink} target="_blank">
+					<Link href={`mailto:${mailLink}`} target="_blank">
 						<Mail className="transition-all hover:text-blue-500" />
 					</Link>
 					<Link href={spotifyUrl} target="_blank">

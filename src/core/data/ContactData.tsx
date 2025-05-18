@@ -17,24 +17,14 @@ const ContactData: ContactDataType[] = [
 		social: "Telegram",
 		username: "@milindgoel15",
 		link: telegramUrl,
-		image: (
-			<Telegram
-				className="fill-black dark:fill-white h-6 w-6"
-				aria-label="Telegram"
-			/>
-		),
+		image: <Telegram className="fill-black dark:fill-white h-6 w-6" aria-label="Telegram" />,
 	},
 	{
 		id: 2,
 		social: "Email",
-		username: "milindgoel15@gmail.com",
-		link: mailLink,
-		image: (
-			<Email
-				className="fill-black dark:fill-white h-6 w-6"
-				aria-label="Email"
-			/>
-		),
+		username: mailLink,
+		link: `mailto:${mailLink}`,
+		image: <Email className="fill-black dark:fill-white h-6 w-6" aria-label="Email" />,
 	},
 ];
 
