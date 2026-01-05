@@ -7,7 +7,7 @@ const SkillsSection = () => {
 		<>
 			<section className="flex flex-col items-center justify-center">
 				<h3 className="text-4xl font-medium py-8">Skills</h3>
-				<section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-4 lg:mx-8">
+				<section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-4 lg:mx-8 xl:mx-24 2xl:mx-36">
 					{SkillsData.map((skills, id) => (
 						<AppMotionDiv
 							key={id}
@@ -19,12 +19,12 @@ const SkillsSection = () => {
 								delay: id * 0.05,
 								ease: "easeIn",
 							}}
-							className=" bg-inverseSurface text-black dark:bg-altBackground dark:text-white backdrop-blur-lg px-5 fold:px-8 py-6 fold:py-10 flex flex-col justify-between gap-10 rounded"
+							className=" bg-inverseSurface text-black dark:bg-altBackground dark:text-white backdrop-blur-lg px-5 fold:px-8 py-6 fold:py-10 flex flex-col justify-start gap-8 rounded-lg shadow-md"
 						>
-							{skills.icon}
+							<span>{skills.icon}</span>
 							<span className="flex flex-col gap-2 max-w-[90%]">
-								<p className="text-xl fold:text-3xl">{skills.title}</p>
-								<p className="">{skills.language}</p>
+								<p className="text-xl ">{skills.title}</p>
+								<p className="text-wrap">{skills.language}</p>
 							</span>
 						</AppMotionDiv>
 					))}
