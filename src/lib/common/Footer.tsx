@@ -1,15 +1,7 @@
-import {
-	githubUrl,
-	instagramUrl,
-	mailLink,
-	spotifyUrl,
-	telegramUrl,
-	youtubeUrl,
-} from "@/core/constants";
-import { GithubIcon, InstagramIcon, Mail, YoutubeIcon } from "lucide-react";
+import { githubUrl, mailLink, telegramUrl } from "@/core/constants";
+import { GithubIcon, Mail } from "lucide-react";
 import Link from "next/link";
 import MGLogoFooter from "../Icons/branding/MGLogoFooter";
-import SpotifyIcon from "../Icons/social/Spotify";
 import Telegram from "../Icons/social/Telegram";
 
 const Footer = () => {
@@ -40,7 +32,7 @@ const Footer = () => {
 					<Link href={`mailto:${mailLink}`} target="_blank">
 						<Mail className="transition-all hover:text-blue-500" />
 					</Link>
-					<Link href={spotifyUrl} target="_blank">
+					{/* <Link href={spotifyUrl} target="_blank">
 						<SpotifyIcon className="h-6 w-6 fill-black dark:fill-white transition-all hover:fill-blue-500 dark:hover:fill-blue-500" />
 					</Link>
 					<Link href={youtubeUrl} target="_blank">
@@ -48,7 +40,7 @@ const Footer = () => {
 					</Link>
 					<Link href={instagramUrl} target="_blank">
 						<InstagramIcon className="transition-all hover:text-blue-500" />
-					</Link>
+					</Link> */}
 				</span>
 			</footer>
 		</>

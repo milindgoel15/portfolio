@@ -50,6 +50,7 @@ const WorkCard = ({ data, id }: { data: WorksDataType; id: number }) => {
 					</span>
 					<Link
 						href={data.link}
+						target="_blank"
 						className="px-7 py-3 flex items-center gap-2 border-2 border-current w-fit transition-all hover:border-primary linkBtn shadow"
 					>
 						{data.icon} Check out
