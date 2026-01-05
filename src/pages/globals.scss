@@ -4,6 +4,8 @@
 
 :root {
 	--background: #14161a;
+	--background-light: #ffffff;
+
 	--surface: #1b1e24;
 	--inverseSurface: rgba(234, 233, 233, 0.607);
 
@@ -50,10 +52,13 @@ html.dark ::-webkit-scrollbar {
 	}
 }
 
-html {
-	scrollbar-width: thin;
-	scrollbar-color: var(--accent-color) var(--background);
-}
+// html {
+// 	scrollbar-width: thin;
+// 	scrollbar-color: var(--accent-color) var(--background);
+// }
+// html.dark {
+// 	scrollbar-color: var(--accent-color) var(--background-light);
+// }
 
 /* custom scrollbar */
 
