@@ -26,10 +26,10 @@ const Hero = () => {
 						transition={{ duration: 0.5 }}
 						className="font-light fold:text-lg lg:w-11/12 lg:tracking-wider"
 					>
-						Hi! I&apos;m Milind Goel, a Web & Flutter developer, based in India. My primary
-						focus is on crafting seamless and visually engaging user experiences. If
-						you&apos;re seeking someone who can bring your digital ideas to life, count me in!
-						I&apos;m here and ready to make it happen.
+						Hi! I&apos;m Milind Goel, a Software Engineer, based in India. My primary focus is
+						on crafting seamless and visually engaging user experiences. If you&apos;re
+						seeking someone who can bring your digital ideas to life, count me in! I&apos;m
+						here and ready to make it happen.
 					</AppMotionP>
 
 					<MotionButton href="/contact" target="_self">
