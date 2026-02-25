@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
 		console.log(
 			"%cMade with ❤︎️ by Milind Goel",
-			"background:#14161a;color:#fff;padding:0.5em 1em;line-height:1.8;"
+			"background:#14161a;color:#fff;padding:0.5em 1em;line-height:1.8;",
 		);
 	}, []);
 
@@ -42,6 +42,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<style jsx global>{`
 				html {
 					font-family: ${raisonne.style.fontFamily};
+					// text selection none
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
 				}
 			`}</style>
 			<Cloudflare />

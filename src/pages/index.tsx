@@ -1,3 +1,5 @@
+import CTA from "@/lib/features/home/cta";
+import Featured from "@/lib/features/home/featured";
 import Hero from "@/lib/features/home/hero";
 import SkillsSection from "@/lib/features/home/skills";
 import Head from "next/head";
@@ -12,6 +14,9 @@ const Home = () => {
 
 			<Hero />
 			<SkillsSection />
+
+			<Featured />
+			<CTA />
 		</>
 	);
 };

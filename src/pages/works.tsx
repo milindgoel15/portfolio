@@ -1,4 +1,4 @@
-import WorksData from "@/core/data/WorksData";
+import { projects } from "@/core/data/ProjectData";
 import { BlobImage } from "@/lib/blobanimation/BlobAnimation";
 import Header from "@/lib/common/Header";
 import MotionButton from "@/lib/components/buttons/MotionButton";
@@ -26,7 +26,7 @@ const Works = () => {
 				</AppMotionH2>
 
 				<section className="mx-4 sm:mx-10 lg:mx-20 space-y-16 my-12">
-					{WorksData.map((data, id) => (
+					{projects.map((data, id) => (
 						<WorkCard key={id} id={id} data={data} />
 					))}
 				</section>

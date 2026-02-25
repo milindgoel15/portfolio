@@ -1,7 +1,7 @@
 const Privacypolicy = () => {
 	return (
 		<>
-			<div className="flex flex-col m-4 md:mx-10 xl:mx-40">
+			<div className="flex flex-col m-4 md:mx-10 xl:mx-40 xl:py-24 text-base leading-7 font-sans">
 				<h1>Privacy Policy</h1>
 				<p>
 					<strong>Effective Date:</strong> 30 December 2024
