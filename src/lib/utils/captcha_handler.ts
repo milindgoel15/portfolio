@@ -22,7 +22,7 @@ export const googleCaptchaVerify = async ({ secret, token }: VerifyTokenProps) =
 			// 	secret: secret,
 			// 	response: token,
 			// }),
-		}
+		},
 	);
 	const data = (await response.json()) as GoogleCaptchaApiType;
 	return data;

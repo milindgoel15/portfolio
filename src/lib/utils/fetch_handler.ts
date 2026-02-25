@@ -1,8 +1,5 @@
 import { NextResponse } from "next/server";
-import {
-	getErrorCode,
-	getErrorMessage,
-} from "./error_handler";
+import { getErrorCode, getErrorMessage } from "./error_handler";
 
 export type ApiResponse<T> = {
 	status: number;
@@ -10,21 +7,16 @@ export type ApiResponse<T> = {
 };
 
 export const fetchHandler = async <T>(
-	handler: () => Promise<Response>
+	handler: () => Promise<Response>,
 ): Promise<ApiResponse<T> | string> => {
-	return await asyncHandler<ApiResponse<T>>(
-		async () => {
-			const res = await handler();
-			const data: ApiResponse<T> =
-				await res.json();
-			return data;
-		}
-	);
+	return await asyncHandler<ApiResponse<T>>(async () => {
+		const res = await handler();
+		const data: ApiResponse<T> = await res.json();
+		return data;
+	});
 };
 
-export const asyncHandler = async <T>(
-	handler: () => Promise<T>
-): Promise<T | string> => {
+export const asyncHandler = async <T>(handler: () => Promise<T>): Promise<T | string> => {
 	try {
 		return await handler();
 	} catch (error) {
@@ -34,9 +26,7 @@ export const asyncHandler = async <T>(
 	}
 };
 
-export const apiHandler = async (
-	handler: () => Promise<NextResponse>
-): Promise<NextResponse> => {
+export const apiHandler = async (handler: () => Promise<NextResponse>): Promise<NextResponse> => {
 	try {
 		return await handler();
 	} catch (error) {

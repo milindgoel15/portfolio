@@ -25,6 +25,8 @@ export default function CTA() {
 
 					<Link
 						href="/resume"
+						target="_blank"
+						rel="noopener noreferrer"
 						className="px-8 py-3 rounded-xl border border-border font-medium hover:bg-muted transition"
 					>
 						View Resume
