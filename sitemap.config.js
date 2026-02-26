@@ -2,4 +2,5 @@
 module.exports = {
 	siteUrl: process.env.SITE_URL || "https://milindgoel.in",
 	generateRobotsTxt: true,
+	generateIndexSitemap: false,
 };
