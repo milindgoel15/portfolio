@@ -18,14 +18,7 @@ const nextConfig = {
 				permanent: true,
 			},
 			{
-				source: "/resume",
-				has: [
-					{
-						type: "query",
-						key: "type",
-						value: "docx",
-					},
-				],
+				source: "/resume-docx",
 				destination:
 					"https://drive.google.com/file/d/1g1hFjqVJc__2Ud01DTeMqQc0hb0vHFNF/view?usp=sharing",
 				permanent: true,
