@@ -14,6 +14,12 @@ const nextConfig = {
 			{
 				source: "/resume",
 				destination:
+					"https://drive.google.com/file/d/1QJXmn8gsLxacr9vHkV0BDxJrESLnUNKf/view?usp=sharing",
+				permanent: true,
+			},
+			{
+				source: "/resume?type=docx",
+				destination:
 					"https://drive.google.com/file/d/1g1hFjqVJc__2Ud01DTeMqQc0hb0vHFNF/view?usp=sharing",
 				permanent: true,
 			},
