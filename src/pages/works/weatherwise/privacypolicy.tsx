@@ -96,7 +96,7 @@ const Privacypolicy = () => {
 					</li>
 					<li>
 						<strong>Data Deletion:</strong> If you wish to delete your data or have questions
-						about how your information is used, please contact us at [Insert Contact Email].
+						about how your information is used, please contact us at mgprojectapps@gmail.com.
 					</li>
 				</ul>
 

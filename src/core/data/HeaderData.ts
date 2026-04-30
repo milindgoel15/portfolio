@@ -7,17 +7,17 @@ export type HeaderDataType = {
 const HeaderData: HeaderDataType[] = [
 	{
 		title: "Works",
-		link: "works",
+		link: "/works",
 		target: "_self",
 	},
 	{
 		title: "Contact",
-		link: "contact",
+		link: "/contact",
 		target: "_self",
 	},
 	{
 		title: "Resume",
-		link: "resume",
+		link: "/resume",
 		target: "_blank",
 	},
 ];
