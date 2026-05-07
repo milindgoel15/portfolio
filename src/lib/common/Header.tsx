@@ -54,7 +54,7 @@ const Header = () => {
 				variants={headerVariants}
 				className={`${
 					pathName === "/" ? "" : ""
-				} pl-5 pr-2 sm:px-8 flex py-3 sm:py-8 xl:px-24 2xl:px-36 items-center justify-between w-full z-50 backdrop-blur md:backdrop-blur-none`}
+				} pl-5 pr-2 sm:px-8 flex py-3 sm:py-8 xl:px-24 2xl:px-36 items-center justify-between w-full z-50 backdrop-blur md:backdrop-blur-none ${theme == "light" && isNavBarOpen && "!bg-white"}`}
 			>
 				<nav className="flex gap-6 items-center">
 					<Link href="/" onClick={() => setNavBarOpen(false)} className="z-10">
@@ -113,7 +113,7 @@ const Header = () => {
 							exit="closed"
 							variants={mobileMenuVariants}
 							onClick={() => setNavBarOpen(false)}
-							className="md:hidden absolute top-full left-0 w-full backdrop-blur text-center py-6 space-y-4"
+							className={`md:hidden absolute top-full left-0 w-full backdrop-blur text-center py-6 space-y-4 ${theme == "light" && "!bg-white"}`}
 						>
 							{HeaderData.map((navItem, id) => (
 								<motion.li key={id} variants={itemVariants}>
